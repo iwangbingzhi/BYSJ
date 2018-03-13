@@ -67,7 +67,7 @@
                     <div class="single-content">
                             ${articleDetailVo.articleCustom.articleContent}
                     </div>
-                    <div class="s-weixin">
+           <%--         <div class="s-weixin">
                         <ul class="weimg1">
                             <li><strong>微信</strong></li>
                             <li>赶快加我聊天吧</li>
@@ -80,7 +80,7 @@
                         </ul>
                         <div class="clear"></div>
                     </div>
-                    <div class="clear"></div>
+                    <div class="clear"></div>--%>
                     <div id="social">
                         <div class="social-main">
                                     <span class="like">
@@ -91,15 +91,15 @@
                                                id="count-${articleDetailVo.articleCustom.articleId}">${articleDetailVo.articleCustom.articleLikeCount}</i>
                                         </a>
                                     </span>
-                            <div class="shang-p">
+                        <%--    <div class="shang-p">
                                 <div class="shang-empty">
                                     <span></span>
                                 </div>
                                 <span class="shang-s">
                                               <a onclick="PaymentUtils.show();" style="cursor:pointer">赏</a>
                                         </span>
-                            </div>
-                            <div class="share-sd">
+                            </div>--%>
+                        <%--    <div class="share-sd">
                                         <span class="share-s" style="margin-top: 25px!important;">
                                             <a href="javascript:void(0)" id="share-s" title="分享">
                                                 <i class="fa fa-share-alt"></i>分享
@@ -121,7 +121,7 @@
                                                onclick="return false;" href="#"></a></li>
                                     </ul>
                                 </div>
-                            </div>
+                            </div>--%>
                             <div class="clear"></div>
                         </div>
                     </div>
@@ -202,19 +202,19 @@
                             </strong>
                         发表。
                     </li>
-                    <li class="reprinted"><strong>转载请注明：</strong>
+               <%--     <li class="reprinted"><strong>转载请注明：</strong>
                         <a href="/article/${articleDetailVo.articleCustom.articleId}"
                            rel="bookmark"
                            title="本文固定链接 /article/${articleDetailVo.articleCustom.articleId}">
                                 ${articleDetailVo.articleCustom.articleTitle} | ${options.optionSiteTitle}</a>
-                    </li>
+                    </li>--%>
                 </ul>
                 <div class="clear"></div>
             </div>
                 <%--版权声明 end--%>
 
 
-                <%--相关文章 start--%>
+         <%--       &lt;%&ndash;相关文章 start&ndash;%&gt;
             <div id="single-widget">
                 <div class="wow fadeInUp" data-wow-delay="0.3s">
                     <aside id="related_post-2" class="widget">
@@ -232,7 +232,7 @@
                         </div>
                         <div class="clear"></div>
                     </aside>
-                        <%--猜你喜欢 start--%>
+                        &lt;%&ndash;猜你喜欢 start&ndash;%&gt;
                     <aside id="hot_post-8" class="widget hot_post">
                         <h3 class="widget-title"><span class="s-icon"></span>猜你喜欢</h3>
                         <div id="hot_post_widget">
@@ -249,10 +249,10 @@
                         </div>
                         <div class="clear"></div>
                     </aside>
-                        <%--猜你喜欢 end--%>
+                        &lt;%&ndash;猜你喜欢 end&ndash;%&gt;
                 </div>
                 <div class="clear"></div>
-            </div>
+            </div>--%>
                 <%--相关文章 end--%>
 
                 <%--上一篇下一篇 start--%>
@@ -312,7 +312,7 @@
                     <form id="comment_form" method="post">
                         <c:if test="${sessionScope.user!=null}">
                             <div class="user_avatar">
-                                <img alt="言曌"
+                                <img alt="wangbingzhi"
                                      src="${sessionScope.user.userAvatar}"
                                      class="avatar avatar-64 photo" height="64" width="64">
                                 登录者：${sessionScope.user.userNickname}
@@ -347,11 +347,11 @@
                                     <input type="email" name="commentAuthorEmail" id="author_email" class="" value=""
                                            tabindex="3" required>
                                 </p>
-                                <p class="comment-form-url">
+                           <%--     <p class="comment-form-url">
                                     <label for="author_url">网址</label>
                                     <input type="url" name="commentAuthorUrl" id="author_url" class="" value=""
                                            tabindex="4">
-                                </p>
+                                </p>--%>
                             </c:if>
                         </div>
                         <div class="clear"></div>

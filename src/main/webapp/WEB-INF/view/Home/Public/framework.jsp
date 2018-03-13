@@ -56,7 +56,7 @@
     <script src="/js/script.js"></script>
     <script src="/plugin/layui/layui.all.js"></script>
 
-<rapid:block name="footer-script"></rapid:block>
+<rapid:block name="footer-script"/>
 
 </body>
 </html>

@@ -53,7 +53,7 @@
                 </dl>
             </li>
             <li class="layui-nav-item">
-                <a href="/admin/logout">退了</a>
+                <a href="/admin/logout">退出登录</a>
             </li>
         </ul>
     </div>
@@ -78,22 +78,22 @@
                         <dd><a href="/admin/page/insert">添加页面</a></dd>
                     </dl>
                 </li>
-                <li class="layui-nav-item">
-                    <a class="" href="javascript:;">
-                        链接
-                    </a>
-                    <dl class="layui-nav-child">
-                        <dd><a href="/admin/link">全部链接</a></dd>
-                        <dd><a href="/admin/link/insert">添加链接</a></dd>
-                    </dl>
-                </li>
-                <li class="layui-nav-item">
+                <%-- <li class="layui-nav-item">
+                     <a class="" href="javascript:;">
+                         链接
+                     </a>
+                     <dl class="layui-nav-child">
+                         <dd><a href="/admin/link">全部链接</a></dd>
+                         <dd><a href="/admin/link/insert">添加链接</a></dd>
+                     </dl>
+                </li>--%>
+                <%--<li class="layui-nav-item">
                     <a href="javascript:;">公告</a>
                     <dl class="layui-nav-child">
                         <dd><a href="/admin/notice">全部公告</a></dd>
                         <dd><a href="/admin/notice/insert">添加公告</a></dd>
                     </dl>
-                </li>
+                </li>--%>
                 <li class="layui-nav-item">
                     <a href="/admin/comment">
                         评论
