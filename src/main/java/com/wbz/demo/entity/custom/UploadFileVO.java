@@ -1,9 +1,5 @@
 package com.wbz.demo.entity.custom;
 
-/**
- * @author 言曌
- * @date 2017/11/30 下午7:41
- */
 
 public class UploadFileVO {
 

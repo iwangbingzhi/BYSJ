@@ -1,8 +1,10 @@
 package com.wbz.demo.util.others;
 
 /**
- * 分页
- * Created by 言曌 on 2017/8/26.
+ * @Title: Page.java
+ * @Description:分页
+ * @Author 王炳智
+ * @Date 2018/3/13 10:08
  */
 import java.io.Serializable;
 

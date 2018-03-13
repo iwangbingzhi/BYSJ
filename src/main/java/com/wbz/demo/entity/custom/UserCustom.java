@@ -3,8 +3,10 @@ package com.wbz.demo.entity.custom;
 import com.wbz.demo.entity.User;
 
 /**
- * 用户信息的扩展
- * Created by 言曌 on 2017/8/24.
+ * @Title: UserCustom.java
+ * @Description:用户信息的扩展类
+ * @Author 王炳智
+ * @Date 2018/3/13 10:24
  */
 public class UserCustom extends User {
     //用户的文章数

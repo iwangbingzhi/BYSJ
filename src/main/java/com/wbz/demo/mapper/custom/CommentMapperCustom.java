@@ -6,9 +6,6 @@ import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
-/**
- * Created by 言曌 on 2017/9/10.
- */
 public interface CommentMapperCustom {
 
 	//根据文章id获取评论列表

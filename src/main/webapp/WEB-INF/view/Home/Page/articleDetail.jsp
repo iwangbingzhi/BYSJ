@@ -6,6 +6,12 @@
 <%@ taglib uri="/WEB-INF/myTag.tld" prefix="lyz" %>
 <%@ taglib prefix="rapid" uri="http://www.rapid-framework.org.cn/rapid" %>
 
+<%--<rapid:override name="description">--%>
+<%--</rapid:override>--%>
+
+<%--<rapid:override name="keywords">--%>
+<%--</rapid:override>--%>
+
 <rapid:override name="title">
     <title>${articleDetailVo.articleCustom.articleTitle}</title>
 </rapid:override>
@@ -61,7 +67,7 @@
                     <div class="single-content">
                             ${articleDetailVo.articleCustom.articleContent}
                     </div>
-               <%--     <div class="s-weixin">
+                    <div class="s-weixin">
                         <ul class="weimg1">
                             <li><strong>微信</strong></li>
                             <li>赶快加我聊天吧</li>
@@ -73,7 +79,7 @@
                             <li><img src="/img/qqGroup.jpg" alt="weinxin"></li>
                         </ul>
                         <div class="clear"></div>
-                    </div>--%>
+                    </div>
                     <div class="clear"></div>
                     <div id="social">
                         <div class="social-main">
@@ -93,7 +99,7 @@
                                               <a onclick="PaymentUtils.show();" style="cursor:pointer">赏</a>
                                         </span>
                             </div>
-                            <%--<div class="share-sd">
+                            <div class="share-sd">
                                         <span class="share-s" style="margin-top: 25px!important;">
                                             <a href="javascript:void(0)" id="share-s" title="分享">
                                                 <i class="fa fa-share-alt"></i>分享
@@ -115,7 +121,7 @@
                                                onclick="return false;" href="#"></a></li>
                                     </ul>
                                 </div>
-                            </div>--%>
+                            </div>
                             <div class="clear"></div>
                         </div>
                     </div>
@@ -196,12 +202,12 @@
                             </strong>
                         发表。
                     </li>
-                    <%--<li class="reprinted"><strong>转载请注明：</strong>
+                    <li class="reprinted"><strong>转载请注明：</strong>
                         <a href="/article/${articleDetailVo.articleCustom.articleId}"
                            rel="bookmark"
                            title="本文固定链接 /article/${articleDetailVo.articleCustom.articleId}">
                                 ${articleDetailVo.articleCustom.articleTitle} | ${options.optionSiteTitle}</a>
-                    </li>--%>
+                    </li>
                 </ul>
                 <div class="clear"></div>
             </div>
@@ -209,7 +215,7 @@
 
 
                 <%--相关文章 start--%>
-           <%-- <div id="single-widget">
+            <div id="single-widget">
                 <div class="wow fadeInUp" data-wow-delay="0.3s">
                     <aside id="related_post-2" class="widget">
                         <h3 class="widget-title">
@@ -226,7 +232,7 @@
                         </div>
                         <div class="clear"></div>
                     </aside>
-                        &lt;%&ndash;猜你喜欢 start&ndash;%&gt;
+                        <%--猜你喜欢 start--%>
                     <aside id="hot_post-8" class="widget hot_post">
                         <h3 class="widget-title"><span class="s-icon"></span>猜你喜欢</h3>
                         <div id="hot_post_widget">
@@ -243,10 +249,10 @@
                         </div>
                         <div class="clear"></div>
                     </aside>
-                        &lt;%&ndash;猜你喜欢 end&ndash;%&gt;
+                        <%--猜你喜欢 end--%>
                 </div>
                 <div class="clear"></div>
-            </div>--%>
+            </div>
                 <%--相关文章 end--%>
 
                 <%--上一篇下一篇 start--%>

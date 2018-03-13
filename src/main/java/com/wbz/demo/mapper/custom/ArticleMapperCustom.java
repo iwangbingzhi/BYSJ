@@ -6,9 +6,6 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-/**
- * Created by 言曌 on 2017/8/24.
- */
 
 @Repository
 public interface ArticleMapperCustom {

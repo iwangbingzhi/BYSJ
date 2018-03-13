@@ -4,7 +4,8 @@
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xmlns="http://java.sun.com/xml/ns/javaee" xmlns:mvc="http://www.springframework.org/schema/mvc"
+         xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:mvc="http://www.springframework.org/schema/mvc"
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
          http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
 
@@ -117,7 +118,7 @@
 
 
   <welcome-file-list>
-    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>Home/Public/framework.jsp</welcome-file>
   </welcome-file-list>
 
   <!--去掉jsp页面的空白-->

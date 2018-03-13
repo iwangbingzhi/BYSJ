@@ -95,14 +95,14 @@
                     </div>
                 </div>
                 <div class="layui-form-item">
-                   <%-- <label class="layui-form-label">微信二维码</label>
+                    <label class="layui-form-label">微信二维码</label>
                     <div class="layui-input-inline">
                         <div class="layui-upload">
                             <div class="layui-upload-list" style="">
                                 <img class="layui-upload-img" src="${optionCustom.optionAboutsiteWechat}" id="demo2" width="100"
                                      height="100">
                                 <p id="demoText2"></p>
-                            </div>--%>
+                            </div>
                             <button type="button" class="layui-btn" id="test2">上传图片</button>
                             <input type="hidden" id="optionAboutsiteWechat" name="optionAboutsiteWechat" value="${optionCustom.optionAboutsiteWechat}">
                         </div>

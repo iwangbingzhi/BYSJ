@@ -13,7 +13,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>${options.optionSiteTitle} &lsaquo; 登录</title>
     <link rel="stylesheet" href="/plugin/font-awesome/css/font-awesome.min.css">
-    <link rel="shortcut icon" href="/img/logo.png">
+    <link rel="shortcut icon" href="/img/logodemo.png">
     <link rel='stylesheet' id='dashicons-css'  href='/plugin/login/dashicons.min.css' type='text/css' media='all' />
     <link rel='stylesheet' id='buttons-css'  href='/plugin/login/buttons.min.css' type='text/css' media='all' />
     <link rel='stylesheet' id='forms-css'  href='/plugin/login/forms.min.css' type='text/css' media='all' />
@@ -22,7 +22,7 @@
     <style type="text/css">
         body{
             font-family: "Microsoft YaHei", Helvetica, Arial, Lucida Grande, Tahoma, sans-serif;
-            background: url(/img/loginBg.jpg);
+            background: url(/img/Background.png);
             width:100%;
             height:100%;
         }
@@ -61,7 +61,7 @@
 </head>
 <body class="login login-action-login wp-core-ui  locale-zh-cn">
 <div id="login">
-    <h1><a href="/" title="欢迎来到Stardew Vallet" tabindex="-1">${options.optionSiteTitle}</a></h1>
+    <h1><a href="/" title="欢迎来到Stardew Valley！" tabindex="-1">${options.optionSiteTitle}</a></h1>
     <%
          String username = "";
          String password = "";
@@ -107,7 +107,7 @@
         if(typeof wpOnload=='function')wpOnload();
     </script>
 
-    <p id="backtoblog"><a href="/">点击返回到Stardew Valley</a></p>
+    <p id="backtoblog"><a href="/">&larr; 返回到Stardew Valley</a></p>
 
 </div>
 
@@ -148,6 +148,7 @@
             })
         }
     })
+
 </script>
 </body>
 </html>

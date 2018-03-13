@@ -5,8 +5,10 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 /**
- * 常用的方法
- * Created by 言曌 on 2017/8/24.
+ * @Title: Functions.java
+ * @Description:常用的方法
+ * @Author 王炳智
+ * @Date 2018/3/13 10:08
  */
 
 public class Functions {

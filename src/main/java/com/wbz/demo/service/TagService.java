@@ -6,9 +6,6 @@ import com.wbz.demo.entity.custom.TagCustom;
 
 import java.util.List;
 
-/**
- * Created by 言曌 on 2017/9/2.
- */
 public interface TagService {
 	
 	//获得标签总数

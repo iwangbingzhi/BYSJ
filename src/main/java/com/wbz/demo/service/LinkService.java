@@ -5,9 +5,7 @@ import com.wbz.demo.entity.custom.LinkCustom;
 
 import java.util.List;
 
-/**
- * Created by 言曌 on 2017/9/4.
- */
+
 public interface LinkService {
 	
 	//获得链接总数

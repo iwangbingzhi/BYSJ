@@ -1,9 +1,6 @@
 package com.wbz.demo.entity.custom;
 
-/**
- * @author 言曌
- * @date 2017/11/30 下午7:04
- */
+
 
 public class ResultVO<T> {
 

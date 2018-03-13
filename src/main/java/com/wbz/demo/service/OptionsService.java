@@ -4,9 +4,6 @@ import com.wbz.demo.entity.Options;
 import com.wbz.demo.entity.custom.OptionsCustom;
 
 
-/**
- * Created by 言曌 on 2017/9/7.
- */
 public interface OptionsService {
 	//获得基本信息
 	public OptionsCustom getOptions() throws Exception;
