@@ -62,7 +62,7 @@
         <%--所有标签 end--%>
 
         <%--博客主体-右侧侧边栏-随机文章 start--%>
-        <aside id="random_post-7" class="widget random_post wow fadeInUp" data-wow-delay="0.3s">
+      <%--  <aside id="random_post-7" class="widget random_post wow fadeInUp" data-wow-delay="0.3s">
             <h3 class="widget-title">
                 <i class="fa fa-bars"></i>随机文章
             </h3>
@@ -78,7 +78,7 @@
                 </ul>
             </div>
             <div class="clear"></div>
-        </aside>
+        </aside>--%>
         <%--博客主体-右侧侧边栏-近期文章 end--%>
 
 </div>

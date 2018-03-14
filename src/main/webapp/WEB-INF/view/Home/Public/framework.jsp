@@ -18,7 +18,7 @@
     <meta name="HandheldFriendly" content="true"/>
     <link rel="shortcut icon" href="/img/logodemo.png"/>
     <rapid:block name="description">
-        <meta name="description" content="${options.optionMetaDescrption}" />
+        <meta name="description" content="${options.optionMetaDescrption}"/>
     </rapid:block>
     <rapid:block name="keywords">
         <meta name="keywords" content="${options.optionMetaKeyword}" />
@@ -28,25 +28,24 @@
                 ${options.optionSiteTitle}-${options.optionSiteDescrption}
         </title>
     </rapid:block>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/plugin/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link rel="stylesheet" href="/plugin/font-awesome/css/font-awesome.min.css"/>
 
-    <rapid:block name="header-style">
+    <rapid:block name="header-style"/>
 
-    </rapid:block>
 </head>
 <body>
 <div id="page" class="site" style="transform: none;">
 
     <%@ include file="part/header.jsp" %>
     <div id="content" class="site-content" style="transform: none;">
-        <rapid:block name="left"></rapid:block>
+        <rapid:block name="left"/>
         <rapid:block name="right">
             <%@ include file="part/sidebar-1.jsp" %>
         </rapid:block>
     </div>
     <div class="clear"></div>
-    <rapid:block name="link"></rapid:block>
+    <rapid:block name="link"/>
     <%@ include file="part/footer.jsp"%>
 
 </div>

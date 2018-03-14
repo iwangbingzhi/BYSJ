@@ -11,7 +11,7 @@
 
     <%--关于本站 start--%>
     <aside class="widget about">
-        <h3 class="widget-title">
+       <h3 class="widget-title">
             <i class="fa fa-bars"></i>关于本站
         </h3>
         <div id="feed_widget">
@@ -27,7 +27,7 @@
                     </div>
                 </div>
                 <div class="clear"></div>
-                <ul>
+                <%--<ul>
                     <li class="weixin">
                         <a title="微信" id="weixin_btn" rel="external nofollow">
                             <i class="fa fa-weixin"> </i>
@@ -56,7 +56,7 @@
                             <i class="fa fa-github"></i>
                         </a>
                     </li>
-                </ul>
+                </ul>--%>
                 <div class="about-inf">
                     <span class="about-pn">文章 ${siteBasicStatistics[0]} </span>
                     <span class="about-cn">留言 ${siteBasicStatistics[1]} </span>
@@ -134,7 +134,7 @@
 
 
     <%--随机文章 start--%>
-    <aside id="random_post-7" class="widget random_post wow fadeInUp" data-wow-delay="0.3s">
+<%--    <aside id="random_post-7" class="widget random_post wow fadeInUp" data-wow-delay="0.3s">
         <h3 class="widget-title">
             <i class="fa fa-bars"></i>随机文章
         </h3>
@@ -150,7 +150,7 @@
             </ul>
         </div>
         <div class="clear"></div>
-    </aside>
+    </aside>--%>
     <%--近期文章 end--%>
 
     <%--最新评论 start--%>
