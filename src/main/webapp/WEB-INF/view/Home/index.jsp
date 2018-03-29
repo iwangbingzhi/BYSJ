@@ -5,9 +5,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@ taglib uri="/WEB-INF/myTag.tld" prefix="lyz" %>
 <%@ taglib prefix="rapid" uri="http://www.rapid-framework.org.cn/rapid" %>
-
-
-    <rapid:override name="breadcrumb">
+<%--首页的展示--%>
+   <%-- <rapid:override name="breadcrumb">
         <nav class="breadcrumb">
             <div class="bull"><i class="fa fa-volume-up"></i></div>
             <div id="scrolldiv">
@@ -22,7 +21,7 @@
                 </div>
             </div>
         </nav>
-    </rapid:override>
+    </rapid:override>--%>
 
     <rapid:override name="left">
         <div id="primary" class="content-area">
