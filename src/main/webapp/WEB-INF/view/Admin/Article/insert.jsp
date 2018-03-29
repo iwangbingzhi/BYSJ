@@ -85,7 +85,6 @@
             3、插入代码前，可以点击 <a href="http://liuyanzhao.com/code-highlight.html" target="_blank">代码高亮</a>,将代码转成HTML格式
 
         </blockquote>
-
     </form>
 
 
@@ -170,8 +169,6 @@
 //        window.onbeforeunload = function() {
 //            return "确认离开当前页面吗？未保存的数据将会丢失";
 //        }
-
-
 
     </script>
 

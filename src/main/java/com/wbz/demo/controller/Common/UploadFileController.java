@@ -18,7 +18,6 @@ import java.util.Calendar;
 @Controller
 public class UploadFileController {
     //上传文件
-    //上传文件
     @RequestMapping(value = "/uploadFile",method = RequestMethod.POST)
     @ResponseBody
     public ResultVO uploadFile(@Param("file")MultipartFile file) throws IOException {
@@ -58,7 +57,7 @@ public class UploadFileController {
         //将内存中的数据写入磁盘
         file.transferTo(descFile);
         //完整的url
-        String fileUrl =  "/uploads/"+dateDirs+ "/"+newFilename;
+        String fileUrl =  "/pics/"+dateDirs+ "/"+newFilename;
 
         ResultVO resultVO = new ResultVO();
         resultVO.setCode(0);

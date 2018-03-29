@@ -6,6 +6,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@ taglib prefix="rapid" uri="http://www.rapid-framework.org.cn/rapid" %>
 <%--保留此处 end--%>
+<%--后台修改文章的页面--%>
 <rapid:override name="title">
     - 修改文章
 </rapid:override>
@@ -186,7 +187,6 @@
                 $("#articleChildCategoryId").html("  <option value=''selected>二级分类</option>"+optionstring);
                 form.render('select'); //这个很重要
             })
-
         });
         //end
 

@@ -67,20 +67,7 @@
                     <div class="single-content">
                             ${articleDetailVo.articleCustom.articleContent}
                     </div>
-           <%--         <div class="s-weixin">
-                        <ul class="weimg1">
-                            <li><strong>微信</strong></li>
-                            <li>赶快加我聊天吧</li>
-                            <li><img src="/img/weixin.jpg"></li>
-                        </ul>
-                        <ul class="weimg2">
-                            <li><strong>博客交流群</strong></li>
-                            <li>海纳百川，大家来水</li>
-                            <li><img src="/img/qqGroup.jpg" alt="weinxin"></li>
-                        </ul>
-                        <div class="clear"></div>
-                    </div>
-                    <div class="clear"></div>--%>
+
                     <div id="social">
                         <div class="social-main">
                                     <span class="like">
@@ -91,37 +78,6 @@
                                                id="count-${articleDetailVo.articleCustom.articleId}">${articleDetailVo.articleCustom.articleLikeCount}</i>
                                         </a>
                                     </span>
-                        <%--    <div class="shang-p">
-                                <div class="shang-empty">
-                                    <span></span>
-                                </div>
-                                <span class="shang-s">
-                                              <a onclick="PaymentUtils.show();" style="cursor:pointer">赏</a>
-                                        </span>
-                            </div>--%>
-                        <%--    <div class="share-sd">
-                                        <span class="share-s" style="margin-top: 25px!important;">
-                                            <a href="javascript:void(0)" id="share-s" title="分享">
-                                                <i class="fa fa-share-alt"></i>分享
-                                            </a>
-                                        </span>
-                                <div id="share">
-                                    <ul class="bdsharebuttonbox bdshare-button-style1-16" data-bd-bind="1503997585792">
-                                        <li><a title="更多" class="bds_more fa fa-plus-square" data-cmd="more"
-                                               onclick="return false;" href="#"></a></li>
-                                        <li><a title="分享到QQ空间" class="fa fa-qq" data-cmd="qzone" onclick="return false;"
-                                               href="#"></a></li>
-                                        <li><a title="分享到新浪微博" class="fa fa-weibo" data-cmd="tsina"
-                                               onclick="return false;" href="#"></a></li>
-                                        <li><a title="分享到腾讯微博" class="fa fa-pinterest-square" data-cmd="tqq"
-                                               onclick="return false;" href="#"></a></li>
-                                        <li><a title="分享到人人网" class="fa fa-renren" data-cmd="renren"
-                                               onclick="return false;" href="#"></a></li>
-                                        <li><a title="分享到微信" class="fa fa-weixin" data-cmd="weixin"
-                                               onclick="return false;" href="#"></a></li>
-                                    </ul>
-                                </div>
-                            </div>--%>
                             <div class="clear"></div>
                         </div>
                     </div>
@@ -190,11 +146,11 @@
 
                 <%--版权声明 start--%>
             <div class="authorbio wow fadeInUp" >
-                <img alt="${articleDetailVo.userCustom.userNickname}" src="${articleDetailVo.userCustom.userAvatar}"
-                     class="avatar avatar-64 photo" height="64" width="64">
+             <%--   <img alt="${articleDetailVo.userCustom.userNickname}" src="${articleDetailVo.userCustom.userAvatar}"
+                     class="avatar avatar-64 photo" height="64" width="64">--%>
                 <ul class="postinfo">
                     <li></li>
-                    <li><strong>版权声明：</strong>本站原创文章，于<fmt:formatDate
+                    <li><strong>版权声明：</strong>本站原创图片，于<fmt:formatDate
                             value="${articleDetailVo.articleCustom.articlePostTime}"
                             pattern="yyyy-MM-dd"/>，由
                             <strong>
@@ -202,58 +158,10 @@
                             </strong>
                         发表。
                     </li>
-               <%--     <li class="reprinted"><strong>转载请注明：</strong>
-                        <a href="/article/${articleDetailVo.articleCustom.articleId}"
-                           rel="bookmark"
-                           title="本文固定链接 /article/${articleDetailVo.articleCustom.articleId}">
-                                ${articleDetailVo.articleCustom.articleTitle} | ${options.optionSiteTitle}</a>
-                    </li>--%>
                 </ul>
                 <div class="clear"></div>
             </div>
-                <%--版权声明 end--%>
 
-
-         <%--       &lt;%&ndash;相关文章 start&ndash;%&gt;
-            <div id="single-widget">
-                <div class="wow fadeInUp" data-wow-delay="0.3s">
-                    <aside id="related_post-2" class="widget">
-                        <h3 class="widget-title">
-                            <span class="s-icon"></span>相关文章
-                        </h3>
-                        <div id="related_post_widget">
-                            <ul>
-                                <c:forEach items="${similarArticleList}" var="s">
-                                    <li>
-                                        <a href="/article/${s.articleId}">${s.articleTitle}</a>
-                                    </li>
-                                </c:forEach>
-                            </ul>
-                        </div>
-                        <div class="clear"></div>
-                    </aside>
-                        &lt;%&ndash;猜你喜欢 start&ndash;%&gt;
-                    <aside id="hot_post-8" class="widget hot_post">
-                        <h3 class="widget-title"><span class="s-icon"></span>猜你喜欢</h3>
-                        <div id="hot_post_widget">
-                            <ul>
-                                <c:forEach items="${mostViewArticleList}" var="m">
-                                    <li>
-                                        <a href="/article/${m.articleId}">
-                                                ${m.articleTitle}
-                                        </a>
-                                    </li>
-                                </c:forEach>
-
-                            </ul>
-                        </div>
-                        <div class="clear"></div>
-                    </aside>
-                        &lt;%&ndash;猜你喜欢 end&ndash;%&gt;
-                </div>
-                <div class="clear"></div>
-            </div>--%>
-                <%--相关文章 end--%>
 
                 <%--上一篇下一篇 start--%>
             <nav class="nav-single">
@@ -295,7 +203,6 @@
                              </span>
                     </c:otherwise>
                 </c:choose>
-
                 <div class="clear"></div>
             </nav>
                 <%--上一篇下一篇 end--%>
@@ -312,11 +219,11 @@
                     <form id="comment_form" method="post">
                         <c:if test="${sessionScope.user!=null}">
                             <div class="user_avatar">
-                                <img alt="wangbingzhi"
+                              <%--  <img alt="wangbingzhi"
                                      src="${sessionScope.user.userAvatar}"
-                                     class="avatar avatar-64 photo" height="64" width="64">
+                                     class="avatar avatar-64 photo" height="64" width="64">--%>
                                 登录者：${sessionScope.user.userNickname}
-                                <br> <a href="javascript:void(0)" onclick="logout()">登出</a>
+                                <br> <a href="javascript:void(0)" onclick="logout()">退出</a>
                                 <input type="hidden" name="commentRole" value="1">
                                 <input type="hidden" name="commentAuthorName"
                                        value="${sessionScope.user.getUserNickname()}">
@@ -347,11 +254,6 @@
                                     <input type="email" name="commentAuthorEmail" id="author_email" class="" value=""
                                            tabindex="3" required>
                                 </p>
-                           <%--     <p class="comment-form-url">
-                                    <label for="author_url">网址</label>
-                                    <input type="url" name="commentAuthorUrl" id="author_url" class="" value=""
-                                           tabindex="4">
-                                </p>--%>
                             </c:if>
                         </div>
                         <div class="clear"></div>

@@ -34,11 +34,11 @@
                 <a href="javascript:;">新建</a>
                 <dl class="layui-nav-child">
                     <dd><a href="/admin/article/insert">文章</a></dd>
-                    <dd><a href="/admin/page/insert">页面</a></dd>
-                    <dd><a href="/admin/category/insert">分类</a></dd>
-                    <dd><a href="/admin/tag/insert">标签</a></dd>
-                    <dd><a href="/admin/notice/insert">公告</a></dd>
-                    <dd><a href="/admin/link/insert">链接</a></dd>
+                    <%--<dd><a href="/admin/page/insert">页面</a></dd>--%>
+                    <%--<dd><a href="/admin/category/insert">分类</a></dd>--%>
+                    <%--<dd><a href="/admin/tag/insert">标签</a></dd>--%>
+                   <%-- <dd><a href="/admin/notice/insert">公告</a></dd>
+                    <dd><a href="/admin/link/insert">链接</a></dd>--%>
                 </dl>
             </li>
         </ul>
@@ -108,13 +108,13 @@
                         <dd><a href="/admin/user/insert">添加用户</a></dd>
                     </dl>
                 </li>
-                <li class="layui-nav-item">
+                <%--<li class="layui-nav-item">
                     <a href="javascript:;">设置</a>
                     <dl class="layui-nav-child">
                         <dd><a href="/admin/menu">菜单</a></dd>
                         <dd><a href="/admin/options">主要选项</a></dd>
                     </dl>
-                </li>
+                </li>--%>
             </ul>
         </div>
     </div>

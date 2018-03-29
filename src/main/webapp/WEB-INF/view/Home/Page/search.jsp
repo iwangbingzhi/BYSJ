@@ -61,7 +61,7 @@
                                 <c:set var="end" value="${articleSearchVoList[0].page.totalPageCount }"/>
                             </c:when>
                             <c:otherwise>
-                                <c:set var="begin" value="${articleSearchVoList[0].page.pageNow-1 }"/>
+                                <c:set var="begin" value="${articleSearchVoList[0].page.pageNow - 1 }"/>
                                 <c:set var="end" value="${articleSearchVoList[0].page.pageNow + 2}"/>
                                 <c:if test="${begin < 2 }">
                                     <c:set var="begin" value="1"/>

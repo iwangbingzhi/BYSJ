@@ -5,7 +5,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@ taglib uri="/WEB-INF/myTag.tld" prefix="lyz" %>
 <%@ taglib prefix="rapid" uri="http://www.rapid-framework.org.cn/rapid" %>
-
+<%--文章分类列表--%>
 <rapid:override name="description">
     <meta name="description" content="${categoryCustom.categoryName}"/>
 </rapid:override>
@@ -60,12 +60,13 @@
                                         <article class="post">
 
                                             <figure class="thumbnail">
-                                                <a href="/article/${a.articleCustom.articleId}">
+                                                <%--随机图片的显示--%>
+                                               <%-- <a href="/article/${a.articleCustom.articleId}">
                                                     <img width="280" height="210"
                                                          src="/img/thumbnail/random/img_${a.articleCustom.articleId%400}.jpg"
                                                          class="attachment-content size-content wp-post-image"
                                                          alt="${a.articleCustom.articleTitle}">
-                                                </a>
+                                                </a>--%>
                                                 <span class="cat">
                                             <a href="/category/${a.categoryCustomList[a.categoryCustomList.size()-1].categoryId}">
                                                     ${a.categoryCustomList[a.categoryCustomList.size()-1].categoryName}

@@ -122,5 +122,4 @@
     <div class="clear"></div>
 </div>
 <%--搜索框 end--%>
-
 <rapid:block name="breadcrumb"/>

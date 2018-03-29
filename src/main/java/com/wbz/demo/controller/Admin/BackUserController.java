@@ -41,6 +41,7 @@ public class BackUserController {
     @RequestMapping(value = "/insert")
     public ModelAndView insertUserView() throws Exception {
         ModelAndView modelAndView = new ModelAndView();
+
         modelAndView.setViewName("Admin/User/insert");
         return modelAndView;
     }

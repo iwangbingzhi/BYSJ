@@ -4,4 +4,6 @@ import com.wbz.demo.entity.Options;
 
 
 public class OptionsCustom extends Options {
+
+
 }
