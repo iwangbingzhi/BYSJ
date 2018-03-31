@@ -35,7 +35,7 @@
     <form class="layui-form" action="/admin/user/editSubmit" id="userForm"
           method="post">
         <input type="hidden" name="userId" id="userId" value="${userCustom.userId}">
-        <div class="layui-form-item">
+      <%--  <div class="layui-form-item">
             <label class="layui-form-label">头像</label>
             <div class="layui-input-inline">
                 <div class="layui-upload">
@@ -48,7 +48,7 @@
                     <input type="hidden" name="userAvatar" id="userAvatar" value="${userCustom.userAvatar}">
                 </div>
             </div>
-        </div>
+        </div>--%>
         <div class="layui-form-item">
             <label class="layui-form-label">用户名 <span style="color: #FF5722; ">*</span></label>
             <div class="layui-input-inline">

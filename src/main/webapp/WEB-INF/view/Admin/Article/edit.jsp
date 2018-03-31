@@ -189,10 +189,6 @@
             })
         });
         //end
-
-
-
-
     </script>
 
 </rapid:override>

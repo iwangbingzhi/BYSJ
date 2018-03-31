@@ -45,7 +45,7 @@
         <ul class="layui-nav layui-layout-right">
             <li class="layui-nav-item">
                 <a href="javascript:;">
-                    <img src="${loginUser.userAvatar}" class="layui-nav-img">
+                   <%-- <img src="${loginUser.userAvatar}" class="layui-nav-img">--%>
                     ${loginUser.userName}
                 </a>
                 <dl class="layui-nav-child">

@@ -46,7 +46,7 @@
     <form class="layui-form" action="/admin/user/editSubmit" id="userForm"
           method="post">
         <input type="hidden" name="userId" id="userId" value="${userCustom.userId}">
-        <div class="layui-form-item">
+       <%-- <div class="layui-form-item">
             <a class="layui-btn layui-btn-primary"  href="/admin/user/edit/${userCustom.userId}">编辑</a>
             <label class="layui-form-label">头像</label>
             <div class="layui-input-inline">
@@ -58,7 +58,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>--%>
         <div class="layui-form-item">
             <label class="layui-form-label">用户名 </label>
             <div class="layui-input-inline">

@@ -3,25 +3,9 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
-<%@ taglib uri="/WEB-INF/myTag.tld" prefix="lyz" %>
+<%@ taglib uri="/WEB-INF/myTag.tld" prefix="wbz" %>
 <%@ taglib prefix="rapid" uri="http://www.rapid-framework.org.cn/rapid" %>
 <%--首页的展示--%>
-   <%-- <rapid:override name="breadcrumb">
-        <nav class="breadcrumb">
-            <div class="bull"><i class="fa fa-volume-up"></i></div>
-            <div id="scrolldiv">
-                <div class="scrolltext">
-                    <ul style="margin-top: 0px;">
-                        <c:forEach items="${noticeCustomList}" var="n">
-                            <li class="scrolltext-title">
-                                <a href="/notice/${n.noticeId}" rel="bookmark">${n.noticeTitle}</a>
-                            </li>
-                        </c:forEach>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </rapid:override>--%>
 
     <rapid:override name="left">
         <div id="primary" class="content-area">
@@ -30,14 +14,15 @@
                 <c:forEach items="${articleListVoList}" var="a">
 
                     <article  class="post type-post">
-
-                        <figure class="thumbnail">
+                        <%--前台文章列表上显示的图片的效果--%>
+                        <%--<figure class="thumbnail">
                             <a href="/article/${a.articleCustom.articleId}">
                                 <img width="280" height="210"
                                      src="/img/thumbnail/random/img_${a.articleCustom.articleId%400}.jpg"
                                      class="attachment-content size-content wp-post-image"
                                      alt="${a.articleCustom.articleTitle}">
-                            </a>
+                            </a>--%>
+                        <%--列表中左上角的文章的分类显示--%>
                             <span class="cat">
                                 <a href="/category/${a.categoryCustomList[a.categoryCustomList.size()-1].categoryId}">
                                         ${a.categoryCustomList[a.categoryCustomList.size()-1].categoryName}
@@ -56,7 +41,7 @@
 
                         <div class="entry-content">
                             <div class="archive-content">
-                                <lyz:htmlFilter>${a.articleCustom.articleContent}</lyz:htmlFilter>......
+                                <wbz:htmlFilter>${a.articleCustom.articleContent}</wbz:htmlFilter>......
                             </div>
                             <span class="title-l"></span>
                             <span class="new-icon">

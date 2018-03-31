@@ -24,6 +24,9 @@ public class ArticleListVo {
 	//作者信息
 	private UserCustom userCustom;
 
+	//文章分页信息
+	private Page page;
+
 	public UserCustom getUserCustom() {
 		return userCustom;
 	}
@@ -32,9 +35,6 @@ public class ArticleListVo {
 		this.userCustom = userCustom;
 	}
 
-	//文章分页信息
-	private Page page;
-	
 	public ArticleCustom getArticleCustom() {
 		return articleCustom;
 	}

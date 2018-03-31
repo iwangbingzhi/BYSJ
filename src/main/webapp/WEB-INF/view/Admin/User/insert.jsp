@@ -34,17 +34,17 @@
           method="post">
         <div class="layui-form-item">
             <input type="hidden" id="userId" value="0">
-            <label class="layui-form-label">头像</label>
+        <%--    <label class="layui-form-label">头像</label>
             <div class="layui-input-inline">
                 <div class="layui-upload">
-                    <div class="layui-upload-list" style="">
+                    &lt;%&ndash;<div class="layui-upload-list" style="">
                         <img class="layui-upload-img" src="" id="demo1" width="100"
                              height="100">
                         <p id="demoText"></p>
-                    </div>
+                    </div>&ndash;%&gt;
                     <button type="button" class="layui-btn" id="test1">上传图片</button>
                 </div>
-            </div>
+            </div>--%>
             <input type="hidden" name="userAvatar" id="userAvatar" value="">
         </div>
         <div class="layui-form-item">

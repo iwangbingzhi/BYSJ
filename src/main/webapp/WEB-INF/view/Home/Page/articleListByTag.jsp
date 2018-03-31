@@ -5,7 +5,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@ taglib uri="/WEB-INF/myTag.tld" prefix="lyz" %>
 <%@ taglib prefix="rapid" uri="http://www.rapid-framework.org.cn/rapid" %>
-
+<%--文章分类列表的页面--%>
     <rapid:override name="description">
         <meta name="description" content="${tagCustom.tagName}"/>
     </rapid:override>
