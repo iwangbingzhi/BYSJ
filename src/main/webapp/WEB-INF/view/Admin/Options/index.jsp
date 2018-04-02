@@ -66,7 +66,7 @@
                 </div>
             </div>
             <div class="layui-tab-item">
-                <div class="layui-form-item">
+                <%--<div class="layui-form-item">
                     <label class="layui-form-label">头像</label>
                     <div class="layui-input-inline">
                         <div class="layui-upload">
@@ -81,7 +81,7 @@
                     </div>
                     <div class="layui-form-mid layui-word-aux">建议 150px*150px</div>
 
-                </div>
+                </div>--%>
                 <div class="layui-form-item">
                     <label class="layui-form-label">昵称</label>
                     <div class="layui-input-inline">
