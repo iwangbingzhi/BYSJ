@@ -59,9 +59,6 @@ public interface ArticleMapperCustom {
 	//获得该分类的文章数
 	public Integer countArticleByCategory(@Param(value = "status") Integer status, @Param(value = "id") Integer id) throws Exception;
 
-	//获得该分类的文章数
-	public Integer countArticleByTag(@Param(value = "status") Integer status, @Param(value = "id") Integer id) throws Exception;
-
 	//更新文章的评论数
 	public void updateCommentCount(@Param(value = "articleId") Integer articleId) throws Exception;
 

@@ -92,12 +92,12 @@ $("#weixin_btn").click(function () {
 });
 
 //获取相对路径
- function  getPath(){
-    var pathName = document.location.pathname;
-    var index = pathName.substr(1).indexOf("/");
-    var result = pathName.substr(0,index+1);
-    return result;
-}
+// function  getPath(){
+//     var pathName = document.location.pathname;
+//     var index = pathName.substr(1).indexOf("/");
+//     var result = pathName.substr(0,index+1);
+//     return result;
+// }
 
 
 // 文字滚动

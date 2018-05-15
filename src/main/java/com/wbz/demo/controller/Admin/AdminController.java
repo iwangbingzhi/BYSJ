@@ -91,7 +91,7 @@ public class AdminController {
             //登录成功
             map.put("code",1);
             map.put("msg","");
-            //添加session
+       //添加session
             request.getSession().setAttribute("user", user);
             //添加cookie
             if(rememberme!=null) {

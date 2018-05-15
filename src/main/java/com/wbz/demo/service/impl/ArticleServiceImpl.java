@@ -3,11 +3,10 @@ package com.wbz.demo.service.impl;
 import com.wbz.demo.entity.custom.*;
 import com.wbz.demo.mapper.ArticleMapper;
 import com.wbz.demo.mapper.CategoryMapper;
-import com.wbz.demo.mapper.TagMapper;
 import com.wbz.demo.mapper.UserMapper;
 import com.wbz.demo.mapper.custom.*;
 import com.wbz.demo.entity.Article;
-import com.wbz.demo.entity.Tag;
+/*import com.wbz.demo.entity.Tag;*/
 import com.wbz.demo.entity.User;
 import com.wbz.demo.entity.custom.*;
 import com.wbz.demo.mapper.custom.ArticleMapperCustom;
@@ -44,9 +43,6 @@ public class ArticleServiceImpl implements ArticleService {
 
 	@Autowired
 	private CategoryMapper categoryMapper;
-
-	@Autowired
-	private TagMapper tagMapper;
 	
 	@Autowired
 	private UserMapper userMapper;
@@ -102,24 +98,6 @@ public class ArticleServiceImpl implements ArticleService {
 				categoryCustomList.add(categoryCustom2);
 			}
 			articleListVo.setCategoryCustomList(categoryCustomList);
-
-			//3、获得标签信息
-			List<TagCustom> tagCustomList = new ArrayList<TagCustom>();
-			String tagIds = articleCustomList.get(i).getArticleTagIds();
-			//防止该文章没有分类，空指针
-			if (tagIds != null && tagIds != "") {
-				String[] tagId = tagIds.split(",");
-				for (int j = 0; j < tagId.length; j++) {
-					Tag tag = tagMapper.selectByPrimaryKey(Integer.valueOf(tagId[j]));
-					//防止标签不存在，被删除
-					if (tag != null) {
-						TagCustom tagCustom = new TagCustom();
-						BeanUtils.copyProperties(tag, tagCustom);
-						tagCustomList.add(tagCustom);
-					}
-				}
-			}
-			articleListVo.setTagCustomList(tagCustomList);
 
 			//4、获得作者信息
 			User user = userMapper.selectByPrimaryKey(articleCustom.getArticleUserId());
@@ -199,24 +177,6 @@ public class ArticleServiceImpl implements ArticleService {
             }
             articleListVo.setCategoryCustomList(categoryCustomList);
 
-			//3、获得标签信息
-			List<TagCustom> tagCustomList = new ArrayList<TagCustom>();
-			String tagIds = articleCustomList.get(i).getArticleTagIds();
-			//防止该文章没有分类，空指针
-			if(tagIds!=null && tagIds!="") {
-				String[] tagId = tagIds.split(",");
-				for (int j = 0; j < tagId.length; j++) {
-					Tag tag = tagMapper.selectByPrimaryKey(Integer.valueOf(tagId[j]));
-					//防止标签不存在，被删除
-					if (tag != null) {
-						TagCustom tagCustom = new TagCustom();
-						BeanUtils.copyProperties(tag, tagCustom);
-						tagCustomList.add(tagCustom);
-					}
-				}
-			}
-			articleListVo.setTagCustomList(tagCustomList);
-
 			//4、获得作者信息
 			User user = userMapper.selectByPrimaryKey(articleCustom.getArticleUserId());
 			UserCustom  userCustom = new UserCustom();
@@ -260,24 +220,6 @@ public class ArticleServiceImpl implements ArticleService {
             categoryCustomList.add(categoryCustom2);
         }
 		articleDetailVo.setCategoryCustomList(categoryCustomList);
-		
-		//3、获得文章的标签
-		String tag_ids = articleCustom.getArticleTagIds();
-		List<TagCustom> tagCustomList = new ArrayList<TagCustom>();
-		if (tag_ids != null && tag_ids != "") {
-			String[] tags = tag_ids.split(",");
-			int tagLength = tags.length;
-			
-			for (int i = 0; i < tagLength; i++) {
-				Tag tag= tagMapper.selectByPrimaryKey(Integer.valueOf(tags[i]));
-				if(tag!=null) {
-					TagCustom tagCustom = new TagCustom();
-					BeanUtils.copyProperties(tag,tagCustom);
-					tagCustomList.add(tagCustom);
-				}
-			}
-		}
-		articleDetailVo.setTagCustomList(tagCustomList);
 		
 		//4、获得文章的作者
 		Integer userId = articleCustom.getArticleUserId();
@@ -340,22 +282,6 @@ public class ArticleServiceImpl implements ArticleService {
                     categoryCustomList.add(categoryCustom2);
                 }
                 articleSearchVo.setCategoryCustomList(categoryCustomList);
-
-                //3、获得标签信息
-                List<TagCustom> tagCustomList = new ArrayList<TagCustom>();
-                String tagIds = articleCustomList.get(i).getArticleTagIds();
-                if(tagIds!=null &&tagIds!="") {
-                    String[] tagId = tagIds.split(",");
-                    for (int j = 0; j < tagId.length; j++) {
-                        Tag tag = tagMapper.selectByPrimaryKey(Integer.valueOf(tagId[j]));
-                        if (tag != null) {
-                            TagCustom tagCustom = new TagCustom();
-                            BeanUtils.copyProperties(tag, tagCustom);
-                            tagCustomList.add(tagCustom);
-                        }
-                    }
-                }
-                articleSearchVo.setTagCustomList(tagCustomList);
 
                 //4、获得作者信息
                 User user = userMapper.selectByPrimaryKey(articleCustom.getArticleUserId());
@@ -436,13 +362,6 @@ public class ArticleServiceImpl implements ArticleService {
 	@Override
 	public Integer countArticleWithCategory(Integer status,Integer id) throws Exception {
 		int count = articleMapperCustom.countArticleByCategory(status,id);
-		return count;
-	}
-
-	//统计某个标签的文章数
-	@Override
-	public Integer countArticleWithTag(Integer status,Integer id) throws Exception {
-		int count = articleMapperCustom.countArticleByTag(status,id);
 		return count;
 	}
 

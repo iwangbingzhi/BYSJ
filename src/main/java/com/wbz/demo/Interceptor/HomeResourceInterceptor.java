@@ -4,6 +4,7 @@ import com.wbz.demo.entity.custom.*;
 import com.wbz.demo.service.*;
 import com.wbz.demo.entity.custom.*;
 import com.wbz.demo.service.*;
+import org.apache.cxf.common.i18n.Exception;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.context.request.WebRequest;
@@ -12,15 +13,12 @@ import org.springframework.web.context.request.WebRequestInterceptor;
 import java.util.ArrayList;
 import java.util.List;
 
-public class HomeResourceInterceptor implements WebRequestInterceptor {
+public class HomeResourceInterceptor implements WebRequestInterceptor{
     @Autowired
     private ArticleService articleService;
 
     @Autowired
     private CategoryService categoryService;
-
-    @Autowired
-    private TagService tagService;
 
     @Autowired
     private LinkService linkService;
@@ -37,7 +35,7 @@ public class HomeResourceInterceptor implements WebRequestInterceptor {
      * 在请求处理之前执行，该方法主要是用于准备资源数据的，然后可以把它们当做请求属性放到WebRequest中
      */
     @Override
-    public void preHandle(WebRequest request) throws Exception {
+    public void preHandle(WebRequest request) throws java.lang.Exception {
         System.out.println("我是HomeResourceInterceptor类中的preHandle方法");
      //导航主要菜单显示
         //分类目录显示
@@ -49,8 +47,8 @@ public class HomeResourceInterceptor implements WebRequestInterceptor {
 
       //侧边栏显示
         //标签列表显示
-		List<TagCustom> tagList = tagService.listTag(1);
-		request.setAttribute("tagList",tagList,WebRequest.SCOPE_REQUEST);
+		/*List<TagCustom> tagList = tagService.listTag(1);
+		request.setAttribute("tagList",tagList,WebRequest.SCOPE_REQUEST);*/
 		//获得随机文章
 		List<ArticleCustom> randomArticleList = articleService.listRandomArticle(1,8);
 		request.setAttribute("randomArticleList",randomArticleList,WebRequest.SCOPE_REQUEST);
@@ -66,7 +64,7 @@ public class HomeResourceInterceptor implements WebRequestInterceptor {
 		siteBasicStatistics.add(articleService.countArticle(1)+"");
 		siteBasicStatistics.add(articleService.countArticleComment(1)+"");
 		siteBasicStatistics.add(categoryService.countCategory(1)+"");
-		siteBasicStatistics.add(tagService.countTag(1)+"");
+		/*siteBasicStatistics.add(tagService.countTag(1)+"");*/
 		siteBasicStatistics.add(linkService.countLink(1)+"");
 		siteBasicStatistics.add(articleService.countArticleView(1)+"");
 		request.setAttribute("siteBasicStatistics",siteBasicStatistics,WebRequest.SCOPE_REQUEST);
@@ -88,13 +86,17 @@ public class HomeResourceInterceptor implements WebRequestInterceptor {
     public void postHandle(WebRequest request, ModelMap map) throws Exception {
         //System.out.println("postHandle.......");
     }
-
     /**
      * 该方法将在整个请求完成之后，也就是说在视图渲染之后进行调用，主要用于进行一些资源的释放
      */
-    @Override
+
     public void afterCompletion(WebRequest request, Exception exception)
             throws Exception {
         //System.out.println("afterCompletion");
+    }
+
+    @Override
+    public void afterCompletion(WebRequest webRequest, java.lang.Exception e) throws java.lang.Exception {
+
     }
 }

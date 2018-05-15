@@ -57,21 +57,20 @@
             </div>
         </div>
 
-        <div class="layui-form-item" pane="">
+<%--        <div class="layui-form-item" pane="">
             <label class="layui-form-label">标签</label>
             <div class="layui-input-block">
                 <c:forEach items="${tagCustomList}" var="t">
                     <input type="checkbox" name="articleTagIds" lay-skin="primary" title="${t.tagName}" value="${t.tagId}" onchange="chk()">
                 </c:forEach>
             </div>
-        </div>
-        <div class="layui-form-item">
+        </div>--%>
+    <%--    <div class="layui-form-item">
             <label class="layui-form-label">状态</label>
             <div class="layui-input-block">
                 <input type="radio" name="articleStatus" value="1" title="发布" checked>
-                <input type="radio" name="articleStatus" value="0" title="草稿" >
             </div>
-        </div>
+        </div>--%>
         <div class="layui-form-item">
             <div class="layui-input-block">
                 <button class="layui-btn" lay-submit="" lay-filter="demo1">立即提交</button>
@@ -118,7 +117,7 @@
             form.verify({
                 title: function (value) {
                     if (value.length < 5) {
-                        return '标题至少得5个字符啊';
+                        return '标题至少5个字符';
                     }
                 }
                 , pass: [/(.+){6,12}$/, '密码必须6到12位']
@@ -173,8 +172,6 @@
     </script>
 
 </rapid:override>
-
-
 <%--此句必须放在最后--%>
 <%@ include file="../Public/framework.jsp"%>
 

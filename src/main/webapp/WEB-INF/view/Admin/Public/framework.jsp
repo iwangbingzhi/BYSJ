@@ -3,7 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
-<%@ taglib prefix="rapid" uri="http://www.rapid-framework.org.cn/rapid" %>
+<%@ taglib uri="http://www.rapid-framework.org.cn/rapid" prefix="rapid"%>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -34,11 +34,6 @@
                 <a href="javascript:;">新建</a>
                 <dl class="layui-nav-child">
                     <dd><a href="/admin/article/insert">文章</a></dd>
-                    <%--<dd><a href="/admin/page/insert">页面</a></dd>--%>
-                    <%--<dd><a href="/admin/category/insert">分类</a></dd>--%>
-                    <%--<dd><a href="/admin/tag/insert">标签</a></dd>--%>
-                   <%-- <dd><a href="/admin/notice/insert">公告</a></dd>
-                    <dd><a href="/admin/link/insert">链接</a></dd>--%>
                 </dl>
             </li>
         </ul>
@@ -68,7 +63,7 @@
                         <dd><a href="/admin/article">全部文章</a></dd>
                         <dd><a href="/admin/article/insert">写文章</a></dd>
                         <dd><a href="/admin/category">全部分类</a></dd>
-                        <dd><a href="/admin/tag">全部标签</a></dd>
+                     <%--   <dd><a href="/admin/tag">全部标签</a></dd>--%>
                     </dl>
                 </li>
                 <li class="layui-nav-item">
@@ -78,22 +73,6 @@
                         <dd><a href="/admin/page/insert">添加页面</a></dd>
                     </dl>
                 </li>
-                <%-- <li class="layui-nav-item">
-                     <a class="" href="javascript:;">
-                         链接
-                     </a>
-                     <dl class="layui-nav-child">
-                         <dd><a href="/admin/link">全部链接</a></dd>
-                         <dd><a href="/admin/link/insert">添加链接</a></dd>
-                     </dl>
-                </li>--%>
-                <%--<li class="layui-nav-item">
-                    <a href="javascript:;">公告</a>
-                    <dl class="layui-nav-child">
-                        <dd><a href="/admin/notice">全部公告</a></dd>
-                        <dd><a href="/admin/notice/insert">添加公告</a></dd>
-                    </dl>
-                </li>--%>
                 <li class="layui-nav-item">
                     <a href="/admin/comment">
                         评论
@@ -108,13 +87,6 @@
                         <dd><a href="/admin/user/insert">添加用户</a></dd>
                     </dl>
                 </li>
-                <%--<li class="layui-nav-item">
-                    <a href="javascript:;">设置</a>
-                    <dl class="layui-nav-child">
-                        <dd><a href="/admin/menu">菜单</a></dd>
-                        <dd><a href="/admin/options">主要选项</a></dd>
-                    </dl>
-                </li>--%>
             </ul>
         </div>
     </div>

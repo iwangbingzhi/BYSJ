@@ -55,7 +55,7 @@
     <c:forEach items="${userCustomList}" var="u">
         <tr>
             <td>
-                 <img src="${u.userAvatar}" width="48" height="48">
+                 <%--<img src="${u.userAvatar}" width="48" height="48">--%>
                  <strong><a href="/admin/user/profile/${u.userId}">${u.userName}</a></strong>
             </td>
             <td>

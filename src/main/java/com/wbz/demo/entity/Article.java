@@ -13,8 +13,6 @@ public class Article {
 
     private Integer articleChildCategoryId;
 
-    private String articleTagIds;
-
     private Integer articleViewCount;
 
     private Integer articleCommentCount;
@@ -72,15 +70,6 @@ public class Article {
     public void setArticleChildCategoryId(Integer articleChildCategoryId) {
         this.articleChildCategoryId = articleChildCategoryId;
     }
-
-    public String getArticleTagIds() {
-        return articleTagIds;
-    }
-
-    public void setArticleTagIds(String articleTagIds) {
-        this.articleTagIds = articleTagIds == null ? null : articleTagIds.trim();
-    }
-
     public Integer getArticleViewCount() {
         return articleViewCount;
     }

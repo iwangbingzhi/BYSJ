@@ -5,7 +5,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@ taglib prefix="rapid" uri="http://www.rapid-framework.org.cn/rapid" %>
 
-<%--该方法是后台中的标签的页面--%>
+<%--该方法是后台全部文章下面的页面--%>
 <rapid:override name="title">
     - 文章列表
 </rapid:override>
@@ -68,7 +68,7 @@
                             <th>id</th>
                             <th>标题</th>
                             <th>所属分类</th>
-                            <th>所带标签</th>
+                            <%--<th>所带标签</th>--%>
                             <td>order</td>
                             <th>发布时间</th>
                             <th>操作</th>
@@ -94,13 +94,13 @@
                                         </c:forEach>
                                     </td>
 
-                                    <td>
+                                  <%--  <td>
                                         <c:forEach items="${a.tagCustomList}" var="t">
                                             <a href="/tag/${t.tagId}"
                                                target="_blank">${t.tagName}</a>
                                             &nbsp;
                                         </c:forEach>
-                                    </td>
+                                    </td>--%>
                                     <td>${a.articleCustom.articleOrder}</td>
                                     <td>
                                         <fmt:formatDate value="${a.articleCustom.articlePostTime}"
@@ -217,7 +217,7 @@
                         <th>id</th>
                         <th>标题</th>
                         <th>所属分类</th>
-                        <th>所带标签</th>
+                        <%--<th>所带标签</th>--%>
                         <th>发布时间</th>
                         <th>操作</th>
                     </tr>
@@ -239,13 +239,13 @@
                                 </c:forEach>
                             </td>
 
-                            <td>
+                         <%--   <td>
                                 <c:forEach items="${a.tagCustomList}" var="t">
                                     <a href="/tag/${t.tagId}"
                                        target="_blank">${t.tagName}</a>
                                     &nbsp;
                                 </c:forEach>
-                            </td>
+                            </td>--%>
 
                             <td>
                                 <fmt:formatDate value="${a.articleCustom.articlePostTime}"

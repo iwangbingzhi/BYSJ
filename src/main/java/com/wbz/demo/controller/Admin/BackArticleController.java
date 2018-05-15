@@ -4,7 +4,6 @@ import com.wbz.demo.entity.Article;
 import com.wbz.demo.entity.custom.*;
 import com.wbz.demo.service.ArticleService;
 import com.wbz.demo.service.CategoryService;
-import com.wbz.demo.service.TagService;
 import com.wbz.demo.entity.custom.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -25,9 +24,6 @@ import java.util.List;
 public class BackArticleController {
     @Autowired
     private ArticleService articleService;
-
-    @Autowired
-    private TagService tagService;
 
     @Autowired
     private CategoryService categoryService;
@@ -70,11 +66,10 @@ public class BackArticleController {
     public ModelAndView insertArticleView() throws Exception {
         ModelAndView modelAndView = new ModelAndView();
 
+
         List<CategoryCustom> categoryCustomList = categoryService.listCategory(1);
-        List<TagCustom> tagCustomList = tagService.listTag(1);
 
         modelAndView.addObject("categoryCustomList",categoryCustomList);
-        modelAndView.addObject("tagCustomList",tagCustomList);
 
         modelAndView.setViewName("Admin/Article/insert");
         return modelAndView;
@@ -179,10 +174,6 @@ public class BackArticleController {
         List<CategoryCustom> categoryCustomList = categoryService.listCategory(1);
         modelAndView.addObject("categoryCustomList",categoryCustomList);
 
-        List<TagCustom> tagCustomList = tagService.listTag(1);
-        modelAndView.addObject("tagCustomList",tagCustomList);
-
-
         modelAndView.setViewName("Admin/Article/edit");
         return modelAndView;
     }
@@ -196,8 +187,6 @@ public class BackArticleController {
         articleService.updateArticle(id,articleCustom);
         return "redirect:/admin/article";
     }
-
-
 
 }
 

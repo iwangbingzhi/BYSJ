@@ -9,7 +9,6 @@
         article_content,
         article_parent_category_id,
         article_child_category_id,
-        article_tag_ids,
         article_view_count,
         article_comment_count,
         article_like_count,
@@ -277,22 +276,6 @@
             article_child_category_id=#{id}
 
         </where>
-    </select>
-
-    <!--统计该标签下有多少文章-->
-    <select id="countArticleByTag" resultType="Integer">
-        SELECT count(*)
-        FROM  `article`
-        <where>
-            article.article_tag_ids = #{id} OR
-            article.article_tag_ids LIKE "${id},%" OR
-            article.article_tag_ids LIKE "%,${id},%" OR
-            article.article_tag_ids LIKE "%,${id}"
-            <if test="status!=null">
-               AND article_status=#{status}
-            </if>
-        </where>
-
     </select>
 
     <update id="updateCommentCount" parameterType="Integer">

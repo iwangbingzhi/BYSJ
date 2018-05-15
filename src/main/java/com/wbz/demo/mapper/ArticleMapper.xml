@@ -22,7 +22,7 @@
   </resultMap>
   <sql id="Base_Column_List" >
     article_id, article_user_id, article_title, article_parent_category_id, article_child_category_id, 
-    article_tag_ids, article_view_count, article_comment_count, article_like_count, article_post_time, 
+    article_view_count, article_comment_count, article_like_count, article_post_time,
     article_update_time, article_is_comment, article_status, article_order
   </sql>
   <sql id="Blob_Column_List" >
@@ -43,13 +43,13 @@
   <insert id="insert" parameterType="com.wbz.demo.entity.Article" >
     insert into article (article_id, article_user_id, article_title, 
       article_parent_category_id, article_child_category_id, 
-      article_tag_ids, article_view_count, article_comment_count, 
+      article_view_count, article_comment_count,
       article_like_count, article_post_time, article_update_time, 
       article_is_comment, article_status, article_order, 
       article_content)
     values (#{articleId,jdbcType=INTEGER}, #{articleUserId,jdbcType=INTEGER}, #{articleTitle,jdbcType=VARCHAR}, 
       #{articleParentCategoryId,jdbcType=INTEGER}, #{articleChildCategoryId,jdbcType=INTEGER}, 
-      #{articleTagIds,jdbcType=VARCHAR}, #{articleViewCount,jdbcType=INTEGER}, #{articleCommentCount,jdbcType=INTEGER}, 
+     #{articleViewCount,jdbcType=INTEGER}, #{articleCommentCount,jdbcType=INTEGER},
       #{articleLikeCount,jdbcType=INTEGER}, #{articlePostTime,jdbcType=TIMESTAMP}, #{articleUpdateTime,jdbcType=TIMESTAMP}, 
       #{articleIsComment,jdbcType=INTEGER}, #{articleStatus,jdbcType=INTEGER}, #{articleOrder,jdbcType=INTEGER}, 
       #{articleContent,jdbcType=LONGVARCHAR})
@@ -71,9 +71,6 @@
       </if>
       <if test="articleChildCategoryId != null" >
         article_child_category_id,
-      </if>
-      <if test="articleTagIds != null" >
-        article_tag_ids,
       </if>
       <if test="articleViewCount != null" >
         article_view_count,
@@ -119,9 +116,6 @@
       <if test="articleChildCategoryId != null" >
         #{articleChildCategoryId,jdbcType=INTEGER},
       </if>
-      <if test="articleTagIds != null" >
-        #{articleTagIds,jdbcType=VARCHAR},
-      </if>
       <if test="articleViewCount != null" >
         #{articleViewCount,jdbcType=INTEGER},
       </if>
@@ -166,9 +160,6 @@
       <if test="articleChildCategoryId != null" >
         article_child_category_id = #{articleChildCategoryId,jdbcType=INTEGER},
       </if>
-      <if test="articleTagIds != null" >
-        article_tag_ids = #{articleTagIds,jdbcType=VARCHAR},
-      </if>
       <if test="articleViewCount != null" >
         article_view_count = #{articleViewCount,jdbcType=INTEGER},
       </if>
@@ -205,7 +196,6 @@
       article_title = #{articleTitle,jdbcType=VARCHAR},
       article_parent_category_id = #{articleParentCategoryId,jdbcType=INTEGER},
       article_child_category_id = #{articleChildCategoryId,jdbcType=INTEGER},
-      article_tag_ids = #{articleTagIds,jdbcType=VARCHAR},
       article_view_count = #{articleViewCount,jdbcType=INTEGER},
       article_comment_count = #{articleCommentCount,jdbcType=INTEGER},
       article_like_count = #{articleLikeCount,jdbcType=INTEGER},
@@ -223,7 +213,6 @@
       article_title = #{articleTitle,jdbcType=VARCHAR},
       article_parent_category_id = #{articleParentCategoryId,jdbcType=INTEGER},
       article_child_category_id = #{articleChildCategoryId,jdbcType=INTEGER},
-      article_tag_ids = #{articleTagIds,jdbcType=VARCHAR},
       article_view_count = #{articleViewCount,jdbcType=INTEGER},
       article_comment_count = #{articleCommentCount,jdbcType=INTEGER},
       article_like_count = #{articleLikeCount,jdbcType=INTEGER},

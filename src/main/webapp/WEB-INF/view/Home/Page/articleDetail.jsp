@@ -129,7 +129,7 @@
             </article><!-- #post -->
 
                 <%--所属标签 start--%>
-            <div class="single-tag">
+           <%-- <div class="single-tag">
                 <ul class="" data-wow-delay="0.3s">
                     <c:forEach items="${articleDetailVo.tagCustomList}" var="t">
                         <li>
@@ -140,7 +140,7 @@
                         </li>
                     </c:forEach>
                 </ul>
-            </div>
+            </div>--%>
                 <%--所属标签 end--%>
 
 

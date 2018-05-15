@@ -69,9 +69,6 @@ public interface ArticleService {
 	//获得某个分类的文章数
 	public Integer countArticleWithCategory(Integer status, Integer id) throws Exception;
 
-	//获得某个标签的文章数
-	public Integer countArticleWithTag(Integer status, Integer id) throws Exception;
-
 	//更新文章的评论数
 	public void updateCommentCount(Integer articleId) throws Exception;
 

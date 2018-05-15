@@ -68,7 +68,7 @@
                 </select>
             </div>
         </div>
-        <div class="layui-form-item" pane="">
+    <%--    <div class="layui-form-item" pane="">
             <label class="layui-form-label">标签</label>
             <c:set var="tagIds" value="${fn:split(articleCustom.articleTagIds,',')}"/>
             <div class="layui-input-block">
@@ -86,14 +86,14 @@
                 <input type="number" name="articleOrder" value="${articleCustom.articleOrder}"   autocomplete="off" class="layui-input">
             </div>
             <div class="layui-form-mid layui-word-aux">输入1-10的数字,order越大排序越前</div>
-        </div>
-        <div class="layui-form-item">
+        </div>--%>
+   <%--     <div class="layui-form-item">
             <label class="layui-form-label">状态</label>
             <div class="layui-input-block">
                 <input type="radio" name="articleStatus" value="1" title="发布" <c:if test="${articleCustom.articleStatus==1}">checked</c:if>>
                 <input type="radio" name="articleStatus" value="0" title="草稿" <c:if test="${articleCustom.articleStatus==0}">checked</c:if>>
             </div>
-        </div>
+        </div>--%>
         <div class="layui-form-item">
             <div class="layui-input-block">
                 <button class="layui-btn" lay-submit="" lay-filter="demo1">保存</button>
@@ -159,9 +159,7 @@
                     ,'italic' //斜体
                     ,'underline' //下划线
                     ,'del' //删除线
-
                     ,'|' //分割线
-
                     ,'left' //左对齐
                     ,'center' //居中对齐
                     ,'right' //右对齐

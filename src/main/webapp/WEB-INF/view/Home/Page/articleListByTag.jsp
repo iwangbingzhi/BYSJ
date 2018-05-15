@@ -1,3 +1,4 @@
+<%--
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -5,7 +6,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@ taglib uri="/WEB-INF/myTag.tld" prefix="lyz" %>
 <%@ taglib prefix="rapid" uri="http://www.rapid-framework.org.cn/rapid" %>
-<%--文章分类列表的页面--%>
+&lt;%&ndash;文章分类列表的页面&ndash;%&gt;
     <rapid:override name="description">
         <meta name="description" content="${tagCustom.tagName}"/>
     </rapid:override>
@@ -19,7 +20,7 @@
     </rapid:override>
 
     <rapid:override name="breadcrumb">
-        <%--面包屑导航 start--%>
+        &lt;%&ndash;面包屑导航 start&ndash;%&gt;
         <nav class="breadcrumb">
             <a class="crumbs" href="/">
                 <i class="fa fa-home"></i>首页</a>
@@ -45,12 +46,12 @@
 
 
         </nav>
-        <%--面包屑导航 end--%>
+        &lt;%&ndash;面包屑导航 end&ndash;%&gt;
     </rapid:override>
 
 
     <rapid:override name="left">
-        <%--博客主体-左侧正文 start--%>
+        &lt;%&ndash;博客主体-左侧正文 start&ndash;%&gt;
         <div id="primary" class="content-area">
             <main id="main" class="site-main" role="main">
 
@@ -58,19 +59,19 @@
                     <c:when test="${articleListVoList!=null}">
                         <c:choose>
                             <c:when test="${articleListVoList.size()!=0}">
-                                <%--文章列表-start--%>
+                                &lt;%&ndash;文章列表-start&ndash;%&gt;
                                 <c:forEach items="${articleListVoList}" var="a">
 
                                     <article class="post"
                                              data-wow-delay="0.3s">
 
                                         <figure class="thumbnail">
-                                        <%--    <a href="/article/${a.articleCustom.articleId}">
+                                        &lt;%&ndash;    <a href="/article/${a.articleCustom.articleId}">
                                                 <img width="280" height="210"
                                                      src="/img/thumbnail/random/img_${a.articleCustom.articleId%400}.jpg"
                                                      class="attachment-content size-content wp-post-image"
                                                      alt="${a.articleCustom.articleTitle}">
-                                            </a>--%>
+                                            </a>&ndash;%&gt;
                                             <span class="cat">
                                <a href="/category/${a.categoryCustomList[a.categoryCustomList.size()-1].categoryId}">
                                        ${a.categoryCustomList[a.categoryCustomList.size()-1].categoryName}
@@ -98,11 +99,11 @@
                                         <i class="fa fa-bookmark-o"></i>
                                     </c:when>
                                     <c:otherwise>
-                                        <jsp:useBean id="nowDate" class="java.util.Date"/> <%--当前时间--%>
+                                        <jsp:useBean id="nowDate" class="java.util.Date"/> &lt;%&ndash;当前时间&ndash;%&gt;
                                         <c:set var="interval"
-                                               value="${nowDate.time - a.articleCustom.articlePostTime.time}"/><%--时间差毫秒数--%>
+                                               value="${nowDate.time - a.articleCustom.articlePostTime.time}"/>&lt;%&ndash;时间差毫秒数&ndash;%&gt;
                                         <fmt:formatNumber value="${interval/1000/60/60/24}" pattern="#0"
-                                                          var="days"/><%--取天数整数--%>
+                                                          var="days"/>&lt;%&ndash;取天数整数&ndash;%&gt;
                                         <c:if test="${days <= 7}">NEW</c:if>
                                     </c:otherwise>
                                 </c:choose>
@@ -140,7 +141,7 @@
                                                                     rel="bookmark">阅读全文</a></span>
                                     </article>
                                 </c:forEach>
-                                <%--文章列表-end--%>
+                                &lt;%&ndash;文章列表-end&ndash;%&gt;
                             </c:when>
                             <c:otherwise>
                                 <section class="no-results not-found">
@@ -167,7 +168,7 @@
             <c:choose>
                 <c:when test="${articleListVoList!=null}">
                     <c:if test="${articleListVoList.size()!=0}">
-                        <%--分页 start--%>
+                        &lt;%&ndash;分页 start&ndash;%&gt;
                         <nav class="navigation pagination" role="navigation">
                             <div class="nav-links">
                                 <c:choose>
@@ -188,10 +189,10 @@
                                         </c:if>
                                     </c:otherwise>
                                 </c:choose>
-                                    <%--上一页 --%>
+                                    &lt;%&ndash;上一页 &ndash;%&gt;
                                 <c:choose>
                                     <c:when test="${articleListVoList[0].page.pageNow eq 1 }">
-                                        <%--当前页为第一页，隐藏上一页按钮--%>
+                                        &lt;%&ndash;当前页为第一页，隐藏上一页按钮&ndash;%&gt;
                                     </c:when>
                                     <c:otherwise>
                                         <a class="page-numbers" href="/tag/${articleListVoList[0].tagCustomList[0].tagId}/p/${articleListVoList[0].page.pageNow-1}" >
@@ -199,15 +200,15 @@
                                         </a>
                                     </c:otherwise>
                                 </c:choose>
-                                    <%--显示第一页的页码--%>
+                                    &lt;%&ndash;显示第一页的页码&ndash;%&gt;
                                 <c:if test="${begin >= 2 }">
                                     <a class="page-numbers" href="/tag/${articleListVoList[0].tagCustomList[0].tagId}/p/1">1</a>
                                 </c:if>
-                                    <%--显示点点点--%>
+                                    &lt;%&ndash;显示点点点&ndash;%&gt;
                                 <c:if test="${begin  > 2 }">
                                     <span class="page-numbers dots">…</span>
                                 </c:if>
-                                    <%--打印 页码--%>
+                                    &lt;%&ndash;打印 页码&ndash;%&gt;
                                 <c:forEach begin="${begin }" end="${end }" var="i">
                                     <c:choose>
                                         <c:when test="${i eq articleListVoList[0].page.pageNow }">
@@ -218,20 +219,20 @@
                                         </c:otherwise>
                                     </c:choose>
                                 </c:forEach>
-                                    <%-- 显示点点点 --%>
+                                    &lt;%&ndash; 显示点点点 &ndash;%&gt;
                                 <c:if test="${end < articleListVoList[0].page.totalPageCount-1 }">
                                     <span class="page-numbers dots">…</span>
                                 </c:if>
-                                    <%-- 显示最后一页的数字 --%>
+                                    &lt;%&ndash; 显示最后一页的数字 &ndash;%&gt;
                                 <c:if test="${end < articleListVoList[0].page.totalPageCount }">
                                     <a href="/tag/${articleListVoList[0].tagCustomList[0].tagId}/p/${articleListVoList[0].page.totalPageCount}">
                                             ${articleListVoList[0].page.totalPageCount}
                                     </a>
                                 </c:if>
-                                    <%--下一页 --%>
+                                    &lt;%&ndash;下一页 &ndash;%&gt;
                                 <c:choose>
                                     <c:when test="${articleListVoList[0].page.pageNow eq articleListVoList[0].page.totalPageCount }">
-                                        <%--到了尾页隐藏，下一页按钮--%>
+                                        &lt;%&ndash;到了尾页隐藏，下一页按钮&ndash;%&gt;
                                     </c:when>
                                     <c:otherwise>
                                         <c:if test="articleListVoList[0].page.totalPageCount>0">
@@ -244,18 +245,18 @@
 
                             </div>
                         </nav>
-                        <%--分页 end--%>
+                        &lt;%&ndash;分页 end&ndash;%&gt;
                     </c:if>
                 </c:when>
             </c:choose>
 
 
         </div><!-- .content-area -->
-        <%--  博客主体-左侧正文 end--%>
+        &lt;%&ndash;  博客主体-左侧正文 end&ndash;%&gt;
     </rapid:override>
 
 
 
 
 
-<%@ include file="../Public/framework.jsp" %>
+<%@ include file="../Public/framework.jsp" %>--%>

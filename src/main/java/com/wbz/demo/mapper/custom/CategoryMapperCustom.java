@@ -5,6 +5,7 @@ package com.wbz.demo.mapper.custom;
 import com.wbz.demo.entity.Category;
 import com.wbz.demo.entity.custom.ArticleCustom;
 import com.wbz.demo.entity.custom.CategoryCustom;
+import org.apache.cxf.common.i18n.Exception;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 

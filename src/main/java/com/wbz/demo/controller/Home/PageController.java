@@ -5,11 +5,10 @@ import com.wbz.demo.service.*;
 import com.wbz.demo.entity.custom.ArticleListVo;
 import com.wbz.demo.entity.custom.CategoryCustom;
 import com.wbz.demo.entity.custom.PageCustom;
-import com.wbz.demo.entity.custom.TagCustom;
+/*import com.wbz.demo.entity.custom.TagCustom;*/
 import com.wbz.demo.service.ArticleService;
 import com.wbz.demo.service.CategoryService;
 import com.wbz.demo.service.PageService;
-import com.wbz.demo.service.TagService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -31,10 +30,6 @@ public class PageController {
 
 	@Autowired
 	private CategoryService categoryService;
-
-
-	@Autowired
-	private TagService tagService;
 
 
 	@ModelAttribute
@@ -79,9 +74,6 @@ public class PageController {
         //分类显示
         List<CategoryCustom> categoryCustomList = categoryService.listCategory(1);
         modelAndView.addObject("categoryCustomList",categoryCustomList);
-        //标签显示
-        List<TagCustom> tagCustomList = tagService.listTag(1);
-        modelAndView.addObject("tagCustomList",tagCustomList);
 
 		return modelAndView;
 	}

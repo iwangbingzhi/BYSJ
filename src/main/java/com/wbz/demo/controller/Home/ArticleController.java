@@ -45,15 +45,6 @@ public class ArticleController {
 		if(articleDetailVo!=null) {
 
 			modelAndView.addObject("articleDetailVo", articleDetailVo);
-			//相关文章
-			/*Integer parentCategoryId = articleService.getArticleById(1, articleId).getArticleParentCategoryId();
-			Integer childCategoryId = articleService.getArticleById(1, articleId).getArticleChildCategoryId();
-			List<ArticleCustom> similarArticleList = articleService.listArticleWithSameCategory(1, parentCategoryId, childCategoryId, 5);
-			modelAndView.addObject("similarArticleList", similarArticleList);*/
-
-			//猜你喜欢
-			/*List<ArticleCustom> mostViewArticleList = articleService.listArticleByViewCount(1, 5);
-			modelAndView.addObject("mostViewArticleList", mostViewArticleList);*/
 			//获取下一篇文章
 			ArticleCustom afterArticle = articleService.getAfterArticle(1, articleId);
 			modelAndView.addObject("afterArticle", afterArticle);
@@ -91,8 +82,6 @@ public class ArticleController {
 		articleService.updateArticle(id, articleCustom);
 		return articleCount+1;
 	}
-
-	
 
 
 	//文章信息修改提交
@@ -138,13 +127,5 @@ public class ArticleController {
 		modelAndView.setViewName("Home/Page/search");
 		return modelAndView;
 	}
-	
 
-
-
-
-
-
-	
-	
 }
