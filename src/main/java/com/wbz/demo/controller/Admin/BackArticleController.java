@@ -54,7 +54,7 @@ public class BackArticleController {
         List<ArticleListVo> publishedArticleListVoList = articleService.listArticleByPage(1,pageNow,pageSize);
         modelAndView.addObject("publishedArticleListVoList",publishedArticleListVoList);
 
-        //不分页显示 草稿文章
+       //不分页显示 草稿文章
         List<ArticleListVo> draftArticleList = articleService.listArticle(0);
         modelAndView.addObject("draftArticleList",draftArticleList);
         modelAndView.setViewName("Admin/Article/index");
@@ -93,7 +93,7 @@ public class BackArticleController {
         return "redirect:/admin/article";
     }
 
-    //后台添加文章提交操作
+   //后台添加草稿文章提交操作
     @RequestMapping(value = "/insertDraftSubmit",method = RequestMethod.POST)
     public String insertArticleDraftSubmit(Article article) throws Exception {
 

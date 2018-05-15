@@ -105,7 +105,6 @@ public class ArticleServiceImpl implements ArticleService {
 			BeanUtils.copyProperties(user, userCustom);
 			articleListVo.setUserCustom(userCustom);
 
-
 			articleListVoList.add(articleListVo);
 
 		}

@@ -18,9 +18,6 @@ public class ArticleDetailVo {
 	//文章的分类相关信息
 	private List<CategoryCustom> categoryCustomList;
 	
-/*	//文章的标签相关信息
-	private List<TagCustom> tagCustomList;*/
-	
 	//评论信息
 	private List<CommentCustom> commentCustomList;
 
@@ -47,18 +44,6 @@ public class ArticleDetailVo {
 	public void setCategoryCustomList(List<CategoryCustom> categoryCustomList) {
 		this.categoryCustomList = categoryCustomList;
 	}
-	
-/*
-	public List<TagCustom> getTagCustomList() {
-		return tagCustomList;
-	}
-*/
-
-/*
-	public void setTagCustomList(List<TagCustom> tagCustomList) {
-		this.tagCustomList = tagCustomList;
-	}
-*/
 
 	public List<CommentCustom> getCommentCustomList() {
 		return commentCustomList;
