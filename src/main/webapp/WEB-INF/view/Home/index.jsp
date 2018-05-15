@@ -70,7 +70,7 @@
                                         <i class="fa fa-eye"></i>
                                             ${a.articleCustom.articleViewCount} views
                                     </span>
-                                    <span class="comment">&nbsp;&nbsp;
+                                <%--    <span class="comment">&nbsp;&nbsp;
                                         <a href="/article/${a.articleCustom.articleId}#comments" rel="external nofollow">
                                           <i class="fa fa-comment-o"></i>
                                             <c:choose>
@@ -83,7 +83,7 @@
                                             </c:choose>
 
                                         </a>
-                                    </span>
+                                    </span>--%>
                                 </span>
                             <div class="clear"></div>
                         </div><!-- .entry-content -->

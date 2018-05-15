@@ -47,5 +47,4 @@ public class NoticeServiceImpl implements NoticeService {
         BeanUtils.copyProperties(notice,noticeCustom);
         return noticeCustom;
     }
-
 }

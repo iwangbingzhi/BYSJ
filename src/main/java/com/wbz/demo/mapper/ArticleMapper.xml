@@ -9,11 +9,9 @@
     <result column="article_child_category_id" property="articleChildCategoryId" jdbcType="INTEGER" />
     <result column="article_tag_ids" property="articleTagIds" jdbcType="VARCHAR" />
     <result column="article_view_count" property="articleViewCount" jdbcType="INTEGER" />
-    <result column="article_comment_count" property="articleCommentCount" jdbcType="INTEGER" />
     <result column="article_like_count" property="articleLikeCount" jdbcType="INTEGER" />
     <result column="article_post_time" property="articlePostTime" jdbcType="TIMESTAMP" />
     <result column="article_update_time" property="articleUpdateTime" jdbcType="TIMESTAMP" />
-    <result column="article_is_comment" property="articleIsComment" jdbcType="INTEGER" />
     <result column="article_status" property="articleStatus" jdbcType="INTEGER" />
     <result column="article_order" property="articleOrder" jdbcType="INTEGER" />
   </resultMap>
@@ -22,8 +20,8 @@
   </resultMap>
   <sql id="Base_Column_List" >
     article_id, article_user_id, article_title, article_parent_category_id, article_child_category_id, 
-    article_view_count, article_comment_count, article_like_count, article_post_time,
-    article_update_time, article_is_comment, article_status, article_order
+    article_view_count, article_like_count, article_post_time,
+    article_update_time, article_status, article_order
   </sql>
   <sql id="Blob_Column_List" >
     article_content
@@ -43,15 +41,15 @@
   <insert id="insert" parameterType="com.wbz.demo.entity.Article" >
     insert into article (article_id, article_user_id, article_title, 
       article_parent_category_id, article_child_category_id, 
-      article_view_count, article_comment_count,
+      article_view_count,
       article_like_count, article_post_time, article_update_time, 
-      article_is_comment, article_status, article_order, 
+      article_status, article_order,
       article_content)
     values (#{articleId,jdbcType=INTEGER}, #{articleUserId,jdbcType=INTEGER}, #{articleTitle,jdbcType=VARCHAR}, 
       #{articleParentCategoryId,jdbcType=INTEGER}, #{articleChildCategoryId,jdbcType=INTEGER}, 
-     #{articleViewCount,jdbcType=INTEGER}, #{articleCommentCount,jdbcType=INTEGER},
+     #{articleViewCount,jdbcType=INTEGER},
       #{articleLikeCount,jdbcType=INTEGER}, #{articlePostTime,jdbcType=TIMESTAMP}, #{articleUpdateTime,jdbcType=TIMESTAMP}, 
-      #{articleIsComment,jdbcType=INTEGER}, #{articleStatus,jdbcType=INTEGER}, #{articleOrder,jdbcType=INTEGER}, 
+      #{articleStatus,jdbcType=INTEGER}, #{articleOrder,jdbcType=INTEGER},
       #{articleContent,jdbcType=LONGVARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.wbz.demo.entity.Article" >
@@ -75,9 +73,6 @@
       <if test="articleViewCount != null" >
         article_view_count,
       </if>
-      <if test="articleCommentCount != null" >
-        article_comment_count,
-      </if>
       <if test="articleLikeCount != null" >
         article_like_count,
       </if>
@@ -86,9 +81,6 @@
       </if>
       <if test="articleUpdateTime != null" >
         article_update_time,
-      </if>
-      <if test="articleIsComment != null" >
-        article_is_comment,
       </if>
       <if test="articleStatus != null" >
         article_status,
@@ -119,9 +111,6 @@
       <if test="articleViewCount != null" >
         #{articleViewCount,jdbcType=INTEGER},
       </if>
-      <if test="articleCommentCount != null" >
-        #{articleCommentCount,jdbcType=INTEGER},
-      </if>
       <if test="articleLikeCount != null" >
         #{articleLikeCount,jdbcType=INTEGER},
       </if>
@@ -130,9 +119,6 @@
       </if>
       <if test="articleUpdateTime != null" >
         #{articleUpdateTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="articleIsComment != null" >
-        #{articleIsComment,jdbcType=INTEGER},
       </if>
       <if test="articleStatus != null" >
         #{articleStatus,jdbcType=INTEGER},
@@ -163,9 +149,6 @@
       <if test="articleViewCount != null" >
         article_view_count = #{articleViewCount,jdbcType=INTEGER},
       </if>
-      <if test="articleCommentCount != null" >
-        article_comment_count = #{articleCommentCount,jdbcType=INTEGER},
-      </if>
       <if test="articleLikeCount != null" >
         article_like_count = #{articleLikeCount,jdbcType=INTEGER},
       </if>
@@ -174,9 +157,6 @@
       </if>
       <if test="articleUpdateTime != null" >
         article_update_time = #{articleUpdateTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="articleIsComment != null" >
-        article_is_comment = #{articleIsComment,jdbcType=INTEGER},
       </if>
       <if test="articleStatus != null" >
         article_status = #{articleStatus,jdbcType=INTEGER},
@@ -197,11 +177,9 @@
       article_parent_category_id = #{articleParentCategoryId,jdbcType=INTEGER},
       article_child_category_id = #{articleChildCategoryId,jdbcType=INTEGER},
       article_view_count = #{articleViewCount,jdbcType=INTEGER},
-      article_comment_count = #{articleCommentCount,jdbcType=INTEGER},
       article_like_count = #{articleLikeCount,jdbcType=INTEGER},
       article_post_time = #{articlePostTime,jdbcType=TIMESTAMP},
       article_update_time = #{articleUpdateTime,jdbcType=TIMESTAMP},
-      article_is_comment = #{articleIsComment,jdbcType=INTEGER},
       article_status = #{articleStatus,jdbcType=INTEGER},
       article_order = #{articleOrder,jdbcType=INTEGER},
       article_content = #{articleContent,jdbcType=LONGVARCHAR}
@@ -214,11 +192,9 @@
       article_parent_category_id = #{articleParentCategoryId,jdbcType=INTEGER},
       article_child_category_id = #{articleChildCategoryId,jdbcType=INTEGER},
       article_view_count = #{articleViewCount,jdbcType=INTEGER},
-      article_comment_count = #{articleCommentCount,jdbcType=INTEGER},
       article_like_count = #{articleLikeCount,jdbcType=INTEGER},
       article_post_time = #{articlePostTime,jdbcType=TIMESTAMP},
       article_update_time = #{articleUpdateTime,jdbcType=TIMESTAMP},
-      article_is_comment = #{articleIsComment,jdbcType=INTEGER},
       article_status = #{articleStatus,jdbcType=INTEGER},
       article_order = #{articleOrder,jdbcType=INTEGER}
     where article_id = #{articleId,jdbcType=INTEGER}

@@ -6,12 +6,11 @@ import com.wbz.demo.mapper.CategoryMapper;
 import com.wbz.demo.mapper.UserMapper;
 import com.wbz.demo.mapper.custom.*;
 import com.wbz.demo.entity.Article;
-/*import com.wbz.demo.entity.Tag;*/
 import com.wbz.demo.entity.User;
 import com.wbz.demo.entity.custom.*;
 import com.wbz.demo.mapper.custom.ArticleMapperCustom;
 import com.wbz.demo.mapper.custom.CategoryMapperCustom;
-import com.wbz.demo.mapper.custom.CommentMapperCustom;
+/*import com.wbz.demo.mapper.custom.CommentMapperCustom;*/
 import com.wbz.demo.service.ArticleService;
 import com.wbz.demo.util.Functions;
 import com.wbz.demo.util.others.Page;
@@ -46,9 +45,6 @@ public class ArticleServiceImpl implements ArticleService {
 	
 	@Autowired
 	private UserMapper userMapper;
-	
-	@Autowired
-	private CommentMapperCustom commentMapperCustom;
 
 
 	@Override
@@ -56,14 +52,7 @@ public class ArticleServiceImpl implements ArticleService {
 		Integer articleCount = articleMapperCustom.countArticle(status);
 		return articleCount ;
 	}
-	
-	@Override
-	public Integer countArticleComment(Integer status) throws Exception {
-		Integer commentCount = articleMapperCustom.countArticleComment(status);
-		return commentCount;
-	}
-	
-	
+
 	@Override
 	public Integer countArticleView(Integer status) throws Exception {
 		Integer viewCount = articleMapperCustom.countArticleView(status);
@@ -185,7 +174,6 @@ public class ArticleServiceImpl implements ArticleService {
 
 			articleListVoList.add(articleListVo);
 		}
-
 		if(articleListVoList.size()>0) {
 			//4、将Page信息存储在第一个元素中
 			articleListVoList.get(0).setPage(page);
@@ -226,16 +214,6 @@ public class ArticleServiceImpl implements ArticleService {
 		UserCustom userCustom = new UserCustom();
 		BeanUtils.copyProperties(user,userCustom);
 		articleDetailVo.setUserCustom(userCustom);
-		
-		//5、获取评论信息列表
-		List<CommentCustom> commentCustomList = commentMapperCustom.listCommentByArticleId(1,id);
-		//给每个评论用户添加头像
-		for(int i=0;i<commentCustomList.size();i++) {
-			String avatar = Functions.getGravatar(commentCustomList.get(i).getCommentAuthorEmail());
-			commentCustomList.get(i).setCommentAuthorAvatar(avatar);
-		}
-		articleDetailVo.setCommentCustomList(commentCustomList);
-
 
 		return articleDetailVo;
 	}
@@ -287,8 +265,6 @@ public class ArticleServiceImpl implements ArticleService {
                 UserCustom userCustom = new UserCustom();
                 BeanUtils.copyProperties(user, userCustom);
                 articleSearchVo.setUserCustom(userCustom);
-
-
                 articleSearchVoList.add(articleSearchVo);
             }
         } else {
@@ -301,7 +277,6 @@ public class ArticleServiceImpl implements ArticleService {
 
 		//6、将查询的关键词存储到第一个元素
 		articleSearchVoList.get(0).setQuery(query);
-
 
 		return articleSearchVoList;
 
@@ -342,13 +317,6 @@ public class ArticleServiceImpl implements ArticleService {
 		List<ArticleCustom> articleCustomsList = articleMapperCustom.listRandomArticle(status,limit);
 		return articleCustomsList;
 	}
-	
-	//获得热评文章列表
-	@Override
-	public List<ArticleCustom> listArticleByCommentCount(Integer status,Integer limit) throws Exception {
-		List<ArticleCustom> articleCustomsList = articleMapperCustom.listArticleByCommentCount(status,limit);
-		return articleCustomsList;
-	}
 
 
     //添加文章
@@ -364,16 +332,10 @@ public class ArticleServiceImpl implements ArticleService {
 		return count;
 	}
 
-	@Override
-	public void updateCommentCount(Integer articleId) throws Exception {
-		articleMapperCustom.updateCommentCount(articleId);
-	}
 
 	@Override
 	public ArticleCustom getLastUpdateArticle() throws Exception {
 		ArticleCustom articleCustom = articleMapperCustom.getLastUpdateArticle();
 		return articleCustom;
 	}
-
-
 }

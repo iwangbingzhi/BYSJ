@@ -1,14 +1,14 @@
-package com.wbz.demo.entity.custom;
+/*package com.wbz.demo.entity.custom;
 
 
 import com.wbz.demo.util.others.Page;
 
-/**
+*//**
  * @Title: CommentListVo.java
  * @Description:用于封装评论信息，包括评论内容，作者信息，文章信息
  * @Author 王炳智
  * @Date 2018/3/12 11:56
- */
+ *//*
 public class CommentListVo {
     //评论信息
     private CommentCustom commentCustom;
@@ -42,4 +42,4 @@ public class CommentListVo {
     public void setPage(Page page) {
         this.page = page;
     }
-}
+}*/

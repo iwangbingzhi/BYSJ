@@ -15,9 +15,6 @@ public interface ArticleService {
 	//获取文章总数
 	public Integer countArticle(Integer status) throws Exception;
 	
-	//获取评论总数
-	public Integer countArticleComment(Integer status) throws Exception;
-	
 	//获得浏览量总数
 	public Integer countArticleView(Integer status) throws Exception;
 	
@@ -59,18 +56,12 @@ public interface ArticleService {
 	
 	//获得随机文章
 	public List<ArticleCustom> listRandomArticle(Integer status, Integer limit) throws  Exception;
-	
-	//获得评论数较多的文章
-	public List<ArticleCustom> listArticleByCommentCount(Integer status, Integer limit) throws Exception;
 
 	//添加文章
 	public void insertArticle(Article article) throws Exception;
 
 	//获得某个分类的文章数
 	public Integer countArticleWithCategory(Integer status, Integer id) throws Exception;
-
-	//更新文章的评论数
-	public void updateCommentCount(Integer articleId) throws Exception;
 
 	//获得最后更新记录
 	public ArticleCustom getLastUpdateArticle() throws Exception;

@@ -1,4 +1,4 @@
-package com.wbz.demo.entity.custom;
+/*package com.wbz.demo.entity.custom;
 
 import com.wbz.demo.entity.Comment;
 
@@ -14,4 +14,4 @@ public class CommentCustom extends Comment {
     public void setCommentAuthorAvatar(String commentAuthorAvatar) {
         this.commentAuthorAvatar = commentAuthorAvatar;
     }
-}
+}*/

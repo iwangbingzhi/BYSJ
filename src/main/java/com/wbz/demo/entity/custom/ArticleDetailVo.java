@@ -19,7 +19,9 @@ public class ArticleDetailVo {
 	private List<CategoryCustom> categoryCustomList;
 	
 	//评论信息
+/*
 	private List<CommentCustom> commentCustomList;
+*/
 
 	public ArticleCustom getArticleCustom() {
 		return articleCustom;
@@ -45,12 +47,16 @@ public class ArticleDetailVo {
 		this.categoryCustomList = categoryCustomList;
 	}
 
+/*
 	public List<CommentCustom> getCommentCustomList() {
 		return commentCustomList;
 	}
-	
+*/
+
+/*
 	public void setCommentCustomList(List<CommentCustom> commentCustomList) {
 		this.commentCustomList = commentCustomList;
 	}
+*/
 
 }

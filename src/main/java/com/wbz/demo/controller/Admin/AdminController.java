@@ -4,7 +4,6 @@ import com.wbz.demo.entity.User;
 import com.wbz.demo.entity.custom.*;
 import com.wbz.demo.service.*;
 import com.wbz.demo.entity.custom.ArticleListVo;
-import com.wbz.demo.entity.custom.CommentListVo;
 import com.wbz.demo.util.Functions;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,8 +29,8 @@ public class AdminController {
     @Autowired
     private ArticleService articleService;
 
-    @Autowired
-    private CommentService commentService;
+/*    @Autowired
+    private CommentService commentService;*/
 
     @Autowired
     private LinkService linkService;
@@ -48,17 +47,6 @@ public class AdminController {
         //文章列表
         List<ArticleListVo> articleCustomList = articleService.listArticle(null);
         modelAndView.addObject("articleCustomList",articleCustomList);
-        //评论列表
-        List<CommentListVo> commentListVoList = commentService.listCommentVo(null);
-        modelAndView.addObject("commentListVoList",commentListVoList);
-        //评论数
-        Integer allCommentCount = commentService.countComment(null);
-        Integer approvedCommentCount = commentService.countComment(1);
-        Integer hiddenCommentCount = commentService.countComment(0);
-        modelAndView.addObject("allCommentCount",allCommentCount);
-        modelAndView.addObject("approvedCommentCount",approvedCommentCount);
-        modelAndView.addObject("hiddenCommentCount",hiddenCommentCount);
-
         modelAndView.setViewName("/Admin/index");
         return modelAndView;
     }

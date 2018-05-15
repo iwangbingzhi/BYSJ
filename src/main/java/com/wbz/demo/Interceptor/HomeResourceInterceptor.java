@@ -29,8 +29,6 @@ public class HomeResourceInterceptor implements WebRequestInterceptor{
     @Autowired
     private MenuService menuService;
 
-    @Autowired
-    private CommentService commentService;
     /**
      * 在请求处理之前执行，该方法主要是用于准备资源数据的，然后可以把它们当做请求属性放到WebRequest中
      */
@@ -46,25 +44,14 @@ public class HomeResourceInterceptor implements WebRequestInterceptor{
         request.setAttribute("menuCustomList",menuCustomList,WebRequest.SCOPE_REQUEST);
 
       //侧边栏显示
-        //标签列表显示
-		/*List<TagCustom> tagList = tagService.listTag(1);
-		request.setAttribute("tagList",tagList,WebRequest.SCOPE_REQUEST);*/
 		//获得随机文章
 		List<ArticleCustom> randomArticleList = articleService.listRandomArticle(1,8);
 		request.setAttribute("randomArticleList",randomArticleList,WebRequest.SCOPE_REQUEST);
-		//获得热评文章
-		List<ArticleCustom> mostCommentArticleList = articleService.listArticleByCommentCount(1,8);
-		request.setAttribute("mostCommentArticleList",mostCommentArticleList,WebRequest.SCOPE_REQUEST);
-		//最新评论
-        List<CommentListVo> recentCommentList = commentService.listRecentComment(10);
-        request.setAttribute("recentCommentList",recentCommentList,WebRequest.SCOPE_REQUEST);
 
 		//获得网站概况
 		List<String> siteBasicStatistics = new ArrayList<String>();
 		siteBasicStatistics.add(articleService.countArticle(1)+"");
-		siteBasicStatistics.add(articleService.countArticleComment(1)+"");
 		siteBasicStatistics.add(categoryService.countCategory(1)+"");
-		/*siteBasicStatistics.add(tagService.countTag(1)+"");*/
 		siteBasicStatistics.add(linkService.countLink(1)+"");
 		siteBasicStatistics.add(articleService.countArticleView(1)+"");
 		request.setAttribute("siteBasicStatistics",siteBasicStatistics,WebRequest.SCOPE_REQUEST);

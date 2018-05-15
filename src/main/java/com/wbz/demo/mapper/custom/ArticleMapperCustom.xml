@@ -10,29 +10,16 @@
         article_parent_category_id,
         article_child_category_id,
         article_view_count,
-        article_comment_count,
         article_like_count,
         article_post_time,
         article_update_time,
-        article_is_comment,
         article_status,
         article_order
     </sql>
 
-
     <!--获取文章总数-->
     <select id="countArticle" resultType="Integer">
         SELECT COUNT(*) FROM `article`
-        <where>
-            <if test="status!=null">
-                article_status=#{status}
-            </if>
-        </where>
-    </select>
-
-    <!--获得文章留言总数-->
-    <select id="countArticleComment" resultType="Integer">
-        SELECT SUM(article_comment_count) FROM article
         <where>
             <if test="status!=null">
                 article_status=#{status}
@@ -233,22 +220,6 @@
         limit #{limit}
     </select>
 
-    <!--获得评论数较多的文章列表-->
-    <select id="listArticleByCommentCount" resultType="com.wbz.demo.entity.custom.ArticleCustom">
-        SELECT
-        <include refid="article_table_all_columns"/>
-        FROM
-        `article`
-        <where>
-            <if test="status!=null">
-                article_status=#{status}
-            </if>
-        </where>
-        ORDER BY
-        article_comment_count DESC,article_order DESC, article_id DESC
-        limit #{limit}
-    </select>
-
 
     <!--文章详情页面内容显示-->
     <select id="getArticleDetailById" resultType="com.wbz.demo.entity.custom.ArticleCustom">
@@ -277,16 +248,6 @@
 
         </where>
     </select>
-
-    <update id="updateCommentCount" parameterType="Integer">
-        UPDATE `article`
-        SET article_comment_count=
-        (
-              SELECT count(*) FROM `comment`
-              WHERE article.article_id=comment.comment_article_id AND comment_status=1
-        )
-        WHERE article_id=#{articleId}
-    </update>
 
     <!--获得最后更新的记录-->
     <select id="getLastUpdateArticle" resultType="com.wbz.demo.entity.custom.ArticleCustom">

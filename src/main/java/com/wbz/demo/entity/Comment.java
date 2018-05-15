@@ -1,3 +1,4 @@
+/*
 package com.wbz.demo.entity;
 
 import java.util.Date;
@@ -132,4 +133,4 @@ public class Comment {
     public void setCommentStatus(Integer commentStatus) {
         this.commentStatus = commentStatus;
     }
-}
+}*/

@@ -32,9 +32,6 @@
     <bean id="optionService" class="com.wbz.demo.service.impl.OptionsServiceImpl"/>
 
     <!--评论管理的service-->
-    <bean id="commentService" class="com.wbz.demo.service.impl.CommentServiceImpl"/>
-
-    <!--评论管理的service-->
     <bean id="noticeService" class="com.wbz.demo.service.impl.NoticeServiceImpl"/>
 
     <!--菜单管理的service-->
