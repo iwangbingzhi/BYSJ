@@ -1,3 +1,4 @@
+/*
 package com.wbz.demo.mapper.custom;
 
 import com.wbz.demo.entity.custom.LinkCustom;
@@ -16,3 +17,4 @@ public interface LinkMapperCustom {
 	
 
 }
+*/

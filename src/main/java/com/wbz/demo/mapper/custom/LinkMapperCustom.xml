@@ -1,3 +1,4 @@
+<!--
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.wbz.demo.mapper.custom.LinkMapperCustom" >
@@ -26,7 +27,7 @@
         </where>
     </select>
 
-    <!--获取链接列表-->
+    &lt;!&ndash;获取链接列表&ndash;&gt;
     <select id="listLink" resultType="com.wbz.demo.entity.custom.LinkCustom">
         SELECT
         <include refid="link_table_all_columns"/>
@@ -45,3 +46,4 @@
 </mapper>
 
 
+-->

@@ -81,10 +81,8 @@ public class BackArticleController {
 
         article.setArticlePostTime(new Date());
         article.setArticleUpdateTime(new Date());
-        article.setArticleIsComment(1);
         article.setArticleViewCount(0);
         article.setArticleLikeCount(0);
-        article.setArticleCommentCount(0);
         article.setArticleStatus(1);
         article.setArticleOrder(1);
 
@@ -99,10 +97,8 @@ public class BackArticleController {
 
         article.setArticlePostTime(new Date());
         article.setArticleUpdateTime(new Date());
-        article.setArticleIsComment(1);
         article.setArticleViewCount(0);
         article.setArticleLikeCount(0);
-        article.setArticleCommentCount(0);
         article.setArticleStatus(0);
         article.setArticleOrder(1);
 
@@ -177,7 +173,6 @@ public class BackArticleController {
         modelAndView.setViewName("Admin/Article/edit");
         return modelAndView;
     }
-
 
     //编辑文章提交
     @RequestMapping(value = "/editSubmit",method = RequestMethod.POST)

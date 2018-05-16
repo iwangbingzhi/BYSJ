@@ -7,7 +7,6 @@
     <result column="article_title" property="articleTitle" jdbcType="VARCHAR" />
     <result column="article_parent_category_id" property="articleParentCategoryId" jdbcType="INTEGER" />
     <result column="article_child_category_id" property="articleChildCategoryId" jdbcType="INTEGER" />
-    <result column="article_tag_ids" property="articleTagIds" jdbcType="VARCHAR" />
     <result column="article_view_count" property="articleViewCount" jdbcType="INTEGER" />
     <result column="article_like_count" property="articleLikeCount" jdbcType="INTEGER" />
     <result column="article_post_time" property="articlePostTime" jdbcType="TIMESTAMP" />

@@ -1,3 +1,4 @@
+/*
 package com.wbz.demo.controller.Home;
 
 import com.wbz.demo.entity.Link;
@@ -33,3 +34,4 @@ public class LinkController {
 		linkService.insertLink(link);
 	}
 }
+*/

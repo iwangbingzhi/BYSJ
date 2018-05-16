@@ -241,7 +241,7 @@
                             </ul>
                         </div>
                         <br>
-                        <div id="latest-comments" class="activity-block"><h3>近期评论</h3>
+                       <%-- <div id="latest-comments" class="activity-block"><h3>近期评论</h3>
                             <ul id="the-comment-list" data-wp-lists="list:comment">
                                 <c:forEach items="${commentListVoList}" begin="0" end="4" step="1" var="c">
                                     <li class="comment   thread-even comment-item approved">
@@ -293,7 +293,7 @@
                                     </li>
                                 </c:forEach>
                             </ul>
-                            <ul class="subsubsub">
+                            &lt;%&ndash;<ul class="subsubsub">
                                 <li class="all"><a
                                         href="">全部<span
                                         class="count">（<span class="all-count">${allCommentCount}</span>）</span></a> |
@@ -308,13 +308,13 @@
                                         class="count">（<span
                                         class="approved-count">${approvedCommentCount}</span>）</span></a> |
                                 </li>
-                            </ul>
-                        </div>
+                            </ul>&ndash;%&gt;
+                        </div>--%>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="layui-col-md6">
+        <%--<div class="layui-col-md6">
             <div id="dashboard_quick_press" class="postbox ">
                 <div class="inside">
                     <form name="post" method="post" id="insertDraftForm"
@@ -358,7 +358,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>--%>
     </div>
 
 </rapid:override>

@@ -21,9 +21,6 @@ public class HomeResourceInterceptor implements WebRequestInterceptor{
     private CategoryService categoryService;
 
     @Autowired
-    private LinkService linkService;
-
-    @Autowired
     private OptionsService optionsService;
 
     @Autowired
@@ -52,7 +49,6 @@ public class HomeResourceInterceptor implements WebRequestInterceptor{
 		List<String> siteBasicStatistics = new ArrayList<String>();
 		siteBasicStatistics.add(articleService.countArticle(1)+"");
 		siteBasicStatistics.add(categoryService.countCategory(1)+"");
-		siteBasicStatistics.add(linkService.countLink(1)+"");
 		siteBasicStatistics.add(articleService.countArticleView(1)+"");
 		request.setAttribute("siteBasicStatistics",siteBasicStatistics,WebRequest.SCOPE_REQUEST);
 		//最后更新的文章

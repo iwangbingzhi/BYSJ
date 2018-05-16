@@ -1,3 +1,4 @@
+/*
 package com.wbz.demo.entity;
 
 import java.util.Date;
@@ -112,4 +113,4 @@ public class Link {
     public void setLinkStatus(Integer linkStatus) {
         this.linkStatus = linkStatus;
     }
-}
+}*/

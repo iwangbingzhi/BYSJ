@@ -17,11 +17,6 @@ public class ArticleListVo {
 	
 	//文章对应的分类
 	private List<CategoryCustom> categoryCustomList;
-	
-	//文章对应的标签
-/*
-	private List<TagCustom> tagCustomList;
-*/
 
 	//作者信息
 	private UserCustom userCustom;
@@ -52,19 +47,6 @@ public class ArticleListVo {
 	public void setCategoryCustomList(List<CategoryCustom> categoryCustomList) {
 		this.categoryCustomList = categoryCustomList;
 	}
-
-/*
-	public List<TagCustom> getTagCustomList() {
-		return tagCustomList;
-	}
-*/
-
-/*
-	public void setTagCustomList(List<TagCustom> tagCustomList) {
-		this.tagCustomList = tagCustomList;
-	}
-*/
-
 	public Page getPage() {
 		return page;
 	}

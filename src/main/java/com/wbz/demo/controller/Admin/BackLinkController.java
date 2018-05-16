@@ -1,3 +1,4 @@
+/*
 package com.wbz.demo.controller.Admin;
 
 
@@ -93,3 +94,4 @@ public class BackLinkController {
         return "redirect:/admin/link";
     }
 }
+*/

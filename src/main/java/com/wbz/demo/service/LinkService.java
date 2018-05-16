@@ -1,3 +1,4 @@
+/*
 package com.wbz.demo.service;
 
 import com.wbz.demo.entity.Link;
@@ -28,3 +29,4 @@ public interface LinkService {
 
 
 }
+*/

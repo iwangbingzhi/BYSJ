@@ -9,31 +9,6 @@
 <div id="sidebar" class="widget-area all-sidebar"
      style="position: relative; overflow: visible; box-sizing: border-box; min-height: 1px;">
 
-    <%--关于本站 start--%>
-    <aside class="widget about">
-       <h3 class="widget-title">
-            <i class="fa fa-bars"></i>关于本站
-        </h3>
-        <div id="feed_widget">
-            <div class="feed-about">
-                <div class="about-main">
-                    <div class="about-name">${options.optionAboutsiteTitle}</div>
-                    <div class="about-the">
-                        ${options.optionAboutsiteContent}
-                    </div>
-                </div>
-                <div class="clear"></div>
-
-                <div class="about-inf">
-                    <span class="about-pn">文章 ${siteBasicStatistics[0]} </span>
-                    <span class="about-cn">留言 ${siteBasicStatistics[1]} </span>
-                </div>
-            </div>
-        </div>
-        <div class="clear"></div>
-    </aside>
-    <%--关于本站 start--%>
-
     <%--网站概况 start--%>
     <aside id="php_text-22" class="widget php_text">
         <h3 class="widget-title">
@@ -42,9 +17,7 @@
         <div class="textwidget widget-text">
             <ul class="site-profile">
                 <li><i class="fa fa-file-o"></i> 文章总数：${siteBasicStatistics[0]} 篇</li>
-                <li><i class="fa fa-commenting-o"></i> 留言数量：${siteBasicStatistics[1]} 条</li>
                 <li><i class="fa fa-folder-o"></i> 分类数量：${siteBasicStatistics[2]} 个</li>
-                <li><i class="fa fa-link"></i> 链接数量：${siteBasicStatistics[4]} 个</li>
                 <li><i class="fa fa-eye"></i> 浏览总量：${siteBasicStatistics[5]} 次</li>
                 <li><i class="fa fa-pencil-square-o"></i> 最后更新：
                     <span style="color:#2F889A">
@@ -59,7 +32,4 @@
     <%--网站概况 end--%>
 
 </div>
-
-
-
 <%--博客主体-右侧侧边栏 end--%>

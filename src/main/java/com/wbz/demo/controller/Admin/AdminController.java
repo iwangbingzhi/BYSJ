@@ -29,12 +29,6 @@ public class AdminController {
     @Autowired
     private ArticleService articleService;
 
-/*    @Autowired
-    private CommentService commentService;*/
-
-    @Autowired
-    private LinkService linkService;
-
     @ModelAttribute
     public void init(Model model) throws Exception {
 

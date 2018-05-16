@@ -4,7 +4,7 @@ import java.util.List;
 
 /**
  * @Title: ArticleDetailVo.java
- * @Description:用于封装文章正文详细信息，包括文章内容信息，作者信息，分类和标签信息
+ * @Description:用于封装文章正文详细信息，包括文章内容信息，作者信息，分类
  * @Author 王炳智
  * @Date 2018/3/12 11:55
  */
@@ -17,11 +17,6 @@ public class ArticleDetailVo {
 	
 	//文章的分类相关信息
 	private List<CategoryCustom> categoryCustomList;
-	
-	//评论信息
-/*
-	private List<CommentCustom> commentCustomList;
-*/
 
 	public ArticleCustom getArticleCustom() {
 		return articleCustom;
@@ -46,17 +41,5 @@ public class ArticleDetailVo {
 	public void setCategoryCustomList(List<CategoryCustom> categoryCustomList) {
 		this.categoryCustomList = categoryCustomList;
 	}
-
-/*
-	public List<CommentCustom> getCommentCustomList() {
-		return commentCustomList;
-	}
-*/
-
-/*
-	public void setCommentCustomList(List<CommentCustom> commentCustomList) {
-		this.commentCustomList = commentCustomList;
-	}
-*/
 
 }

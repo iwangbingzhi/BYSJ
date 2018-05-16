@@ -1,3 +1,4 @@
+/*
 package com.wbz.demo.service.impl;
 
 import com.wbz.demo.entity.Link;
@@ -53,3 +54,4 @@ public class LinkServiceImpl implements LinkService {
 	}
 
 }
+*/

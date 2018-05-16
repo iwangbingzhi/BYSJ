@@ -332,7 +332,6 @@ public class ArticleServiceImpl implements ArticleService {
 		return count;
 	}
 
-
 	@Override
 	public ArticleCustom getLastUpdateArticle() throws Exception {
 		ArticleCustom articleCustom = articleMapperCustom.getLastUpdateArticle();

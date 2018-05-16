@@ -15,15 +15,11 @@ public class Article {
 
     private Integer articleViewCount;
 
-    private Integer articleCommentCount;
-
     private Integer articleLikeCount;
 
     private Date articlePostTime;
 
     private Date articleUpdateTime;
-
-    private Integer articleIsComment;
 
     private Integer articleStatus;
 
@@ -78,14 +74,6 @@ public class Article {
         this.articleViewCount = articleViewCount;
     }
 
-    public Integer getArticleCommentCount() {
-        return articleCommentCount;
-    }
-
-    public void setArticleCommentCount(Integer articleCommentCount) {
-        this.articleCommentCount = articleCommentCount;
-    }
-
     public Integer getArticleLikeCount() {
         return articleLikeCount;
     }
@@ -108,14 +96,6 @@ public class Article {
 
     public void setArticleUpdateTime(Date articleUpdateTime) {
         this.articleUpdateTime = articleUpdateTime;
-    }
-
-    public Integer getArticleIsComment() {
-        return articleIsComment;
-    }
-
-    public void setArticleIsComment(Integer articleIsComment) {
-        this.articleIsComment = articleIsComment;
     }
 
     public Integer getArticleStatus() {

@@ -202,7 +202,7 @@ $("#scrolldiv").textSlider({line: 1, speed: 300, timer: 6000});
             + "     </div>"
             + "     <div class=\"qrcode-img qrCode_2\" id=\"qrCode_2\">"
             + "      <div class=\"qrcode-border box-size\" style=\"border: 9.02px solid rgb(235, 95, 1\">"
-            + "       <img  class=\"qrcode-img qrCode_2\" id=\"qrCode_2\"  src=\"/img/shang/alipay.jpg\"  />"
+            + "      <img  class=\"qrcode-img qrCode_2\" id=\"qrCode_2\"  src=\"/img/shang/alipay.jpg\"  />"
             + "      </div>"
             + "      <p class=\"qrcode-tip\">打赏</p>"
             + "     </div>"
@@ -332,15 +332,15 @@ function increaseLikeCount() {
             success: function (data) {
                 $(".count").html(data);
                 $.cookie(
-                    "likeId",
-                    articleId,//需要cookie写入的业务
+                    "likeId", //读取cookie数据
+                    articleId,//将读取到的cookie数据写入到articleId中
                     {
-                        "path": "/", //cookie的默认属性
+                        "path": "/", //cookie的默认属性设置之后整个网站都可以访问该cookie
                     }
                 );
             },
             error: function () {
-                //alert("获取数据出错!");
+                /*alert("获取数据出错!");*/
             },
         });
     }

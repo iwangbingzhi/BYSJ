@@ -4,11 +4,7 @@ import com.wbz.demo.entity.custom.*;
 import com.wbz.demo.service.*;
 
 import com.wbz.demo.entity.custom.ArticleListVo;
-import com.wbz.demo.entity.custom.LinkCustom;
-import com.wbz.demo.entity.custom.NoticeCustom;
 import com.wbz.demo.service.ArticleService;
-import com.wbz.demo.service.LinkService;
-import com.wbz.demo.service.NoticeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -29,22 +25,15 @@ public class IndexController {
 	@Autowired
 	private ArticleService articleService;
 
-	@Autowired
+	/*@Autowired
 	private LinkService linkService;
-
-	@Autowired
-	private NoticeService noticeService;
 	
 	@ModelAttribute
 	public void init(Model model)  throws Exception {
 		//友情链接
 		List<LinkCustom> linkCustomList = linkService.listLink(1);
 		model.addAttribute("linkCustomList",linkCustomList);
-
-		//公告
-		List<NoticeCustom> noticeCustomList = noticeService.listNotice(1);
-		model.addAttribute("noticeCustomList",noticeCustomList);
-	}
+	}*/
 	
 	//首页显示
 	@RequestMapping("/")

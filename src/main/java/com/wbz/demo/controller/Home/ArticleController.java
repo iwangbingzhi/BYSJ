@@ -40,7 +40,7 @@ public class ArticleController {
 	public ModelAndView ArticleDetailView(@PathVariable("articleId") Integer articleId) throws Exception{
 		ModelAndView modelAndView = new ModelAndView();
 
-		//文章信息，分类，标签，作者，评论
+		//文章信息，分类，作者
 		ArticleDetailVo articleDetailVo  = articleService.getArticleDetailById(articleId);
 		if(articleDetailVo!=null) {
 
