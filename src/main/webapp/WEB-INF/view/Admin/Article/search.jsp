@@ -65,7 +65,6 @@
                     <th>id</th>
                     <th>标题</th>
                     <th>所属分类</th>
-                    <th>所带标签</th>
                     <th>order</th>
                     <th>发布时间</th>
                     <th>操作</th>

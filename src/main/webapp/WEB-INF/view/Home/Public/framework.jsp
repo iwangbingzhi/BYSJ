@@ -25,7 +25,7 @@
     </rapid:block>
     <rapid:block name="title">
         <title>
-                ${options.optionSiteTitle}-${options.optionSiteDescrption}
+                Stardew Valley
         </title>
     </rapid:block>
     <link rel="stylesheet" href="/css/style.css">

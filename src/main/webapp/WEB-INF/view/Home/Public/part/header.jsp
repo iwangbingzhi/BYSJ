@@ -45,9 +45,9 @@
                     <i class="fa fa-search"></i>
                 </span>
             <div class="logo-site"><h1 class="site-title">
-                <a href="/" title="${options.optionSiteTitle}">${options.optionSiteTitle}</a>
+                Stardew Valley
             </h1>
-                <p class="site-description">${options.optionSiteDescrption}</p>
+                <p class="site-description">尽情分享您的每一个瞬间</p>
             </div><!-- .logo-site -->
             <div id="site-nav-wrap">
                 <div id="sidr-close">

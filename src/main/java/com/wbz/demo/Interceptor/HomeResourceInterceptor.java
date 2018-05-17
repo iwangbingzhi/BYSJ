@@ -1,5 +1,4 @@
 package com.wbz.demo.Interceptor;
-import com.wbz.demo.entity.Options;
 import com.wbz.demo.entity.custom.*;
 import com.wbz.demo.service.*;
 import com.wbz.demo.entity.custom.*;
@@ -20,12 +19,6 @@ public class HomeResourceInterceptor implements WebRequestInterceptor{
     @Autowired
     private CategoryService categoryService;
 
-    @Autowired
-    private OptionsService optionsService;
-
-    @Autowired
-    private MenuService menuService;
-
     /**
      * 在请求处理之前执行，该方法主要是用于准备资源数据的，然后可以把它们当做请求属性放到WebRequest中
      */
@@ -36,9 +29,6 @@ public class HomeResourceInterceptor implements WebRequestInterceptor{
         //分类目录显示
         List<CategoryCustom> categoryList = categoryService.listCategory(1);
         request.setAttribute("categoryList",categoryList,WebRequest.SCOPE_REQUEST);
-        //菜单显示
-        List<MenuCustom> menuCustomList = menuService.listMenu(1);
-        request.setAttribute("menuCustomList",menuCustomList,WebRequest.SCOPE_REQUEST);
 
       //侧边栏显示
 		//获得随机文章
@@ -53,11 +43,6 @@ public class HomeResourceInterceptor implements WebRequestInterceptor{
 		//最后更新的文章
         ArticleCustom lastUpdateArticle = articleService.getLastUpdateArticle();
         request.setAttribute("lastUpdateArticle",lastUpdateArticle,WebRequest.SCOPE_REQUEST);
-
-        //页脚显示
-		//博客基本信息显示(Options)
-		Options options = optionsService.getOptions();
-		request.setAttribute("options", options,WebRequest.SCOPE_REQUEST);
 
     }
     /**

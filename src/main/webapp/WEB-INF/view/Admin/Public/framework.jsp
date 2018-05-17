@@ -63,20 +63,7 @@
                         <dd><a href="/admin/article">全部文章</a></dd>
                         <dd><a href="/admin/article/insert">写文章</a></dd>
                         <dd><a href="/admin/category">全部分类</a></dd>
-                     <%--   <dd><a href="/admin/tag">全部标签</a></dd>--%>
                     </dl>
-                </li>
-                <li class="layui-nav-item">
-                    <a href="javascript:;">页面</a>
-                    <dl class="layui-nav-child">
-                        <dd><a href="/admin/page">全部页面</a></dd>
-                        <dd><a href="/admin/page/insert">添加页面</a></dd>
-                    </dl>
-                </li>
-                <li class="layui-nav-item">
-                    <a href="/admin/comment">
-                        评论
-                    </a>
                 </li>
                 <li class="layui-nav-item">
                     <a class="" href="javascript:;">

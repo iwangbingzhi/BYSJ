@@ -36,7 +36,7 @@
     <div class="layui-tab layui-tab-card">
         <ul class="layui-tab-title">
             <li class="layui-this">已发布(${publishedArticleListVoList[0].page.totalCount})</li>
-            <li>草稿(${draftArticleList.size()})</li>
+
         </ul>
         <div class="layui-tab-content">
             <div class="layui-tab-item layui-show">
@@ -57,8 +57,6 @@
                             <col width="50">
                             <col width="300">
                             <col width="200">
-                            <col width="200">
-                            <col width="50">
                             <col width="150">
                             <col width="100">
                         </colgroup>
@@ -68,8 +66,6 @@
                             <th>id</th>
                             <th>标题</th>
                             <th>所属分类</th>
-                            <%--<th>所带标签</th>--%>
-                            <td>order</td>
                             <th>发布时间</th>
                             <th>操作</th>
                         </tr>
@@ -93,15 +89,6 @@
                                             &nbsp;
                                         </c:forEach>
                                     </td>
-
-                                  <%--  <td>
-                                        <c:forEach items="${a.tagCustomList}" var="t">
-                                            <a href="/tag/${t.tagId}"
-                                               target="_blank">${t.tagName}</a>
-                                            &nbsp;
-                                        </c:forEach>
-                                    </td>--%>
-                                    <td>${a.articleCustom.articleOrder}</td>
                                     <td>
                                         <fmt:formatDate value="${a.articleCustom.articlePostTime}"
                                                         pattern="MM月dd日 HH:mm"/>

@@ -22,17 +22,8 @@
     <!-- 分类管理的service -->
     <bean id="categoryService" class="com.wbz.demo.service.impl.CategoryServiceImpl"/>
 
-<!--    &lt;!&ndash;链接管理的service&ndash;&gt;
-    <bean id="linkService" class="com.wbz.demo.service.impl.LinkServiceImpl"/>-->
-
-    <!--页面管理的service-->
-    <bean id="pageService" class="com.wbz.demo.service.impl.PageServiceImpl"/>
-
     <!--网站信息管理的service-->
-    <bean id="optionService" class="com.wbz.demo.service.impl.OptionsServiceImpl"/>
-
-    <!--菜单管理的service-->
-    <bean id="menuService" class="com.wbz.demo.service.impl.MenuServiceImpl"/>
+   <!-- <bean id="optionService" class="com.wbz.demo.service.impl.OptionsServiceImpl"/>-->
 
     <!--常用功能-->
     <bean id="functions" class="com.wbz.demo.util.Functions"/>

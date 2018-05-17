@@ -8,8 +8,8 @@
 <%--页脚 start--%>
 <footer id="colophon" class="site-footer" role="contentinfo">
     <div class="site-info">
-        <p style="text-align: center;">Copyright © 2017
-            <a href="/" target="_blank" rel="noopener noreferrer">${options.optionSiteTitle}</a>
+        <p style="text-align: center;">Copyright © 2018
+            <a href="/" target="_blank" rel="noopener noreferrer">Stardew Valley</a>
             All rights reserved.
         </p>
     </div>
