@@ -25,7 +25,7 @@
         <%--博客主体-右侧侧边栏-随机文章 start--%>
         <aside id="random_post-7" class="widget random_post wow fadeInUp" data-wow-delay="0.3s">
             <h3 class="widget-title">
-                <i class="fa fa-bars"></i>推荐文章
+                <i class="fa fa-bars"></i>推荐图片
             </h3>
             <div id="random_post_widget">
                 <ul>

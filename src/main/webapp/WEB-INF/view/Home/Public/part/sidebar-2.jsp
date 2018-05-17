@@ -1,6 +1,6 @@
 <%--
     一般用于首页侧边栏：
-    包括 关于本站，网站概况，热评文章，所有标签，随机文章 等小工具
+    包括 关于本站，网站概况，随机文章 等小工具
 
 --%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -17,8 +17,7 @@
         <div class="textwidget widget-text">
             <ul class="site-profile">
                 <li><i class="fa fa-file-o"></i> 文章总数：${siteBasicStatistics[0]} 篇</li>
-                <li><i class="fa fa-folder-o"></i> 分类数量：${siteBasicStatistics[2]} 个</li>
-                <li><i class="fa fa-eye"></i> 浏览总量：${siteBasicStatistics[5]} 次</li>
+                <li><i class="fa fa-folder-o"></i> 分类数量：${siteBasicStatistics[1]} 个</li>
                 <li><i class="fa fa-pencil-square-o"></i> 最后更新：
                     <span style="color:#2F889A">
                                         <fmt:formatDate value="${lastUpdateArticle.articleUpdateTime}" pattern="yyyy年MM月dd日"/>

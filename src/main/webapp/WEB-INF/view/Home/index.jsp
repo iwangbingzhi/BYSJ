@@ -3,7 +3,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
-<%@ taglib uri="/WEB-INF/myTag.tld" prefix="wbz" %>
 <%@ taglib prefix="rapid" uri="http://www.rapid-framework.org.cn/rapid" %>
 <%--首页的展示--%>
 
@@ -14,15 +13,6 @@
                 <c:forEach items="${articleListVoList}" var="a">
 
                     <article  class="post type-post">
-                        <%--前台文章列表上显示的图片的效果--%>
-                        <%--<figure class="thumbnail">
-                            <a href="/article/${a.articleCustom.articleId}">
-                                <img width="280" height="210"
-                                     src="/img/thumbnail/random/img_${a.articleCustom.articleId%400}.jpg"
-                                     class="attachment-content size-content wp-post-image"
-                                     alt="${a.articleCustom.articleTitle}">
-                            </a>--%>
-                        <%--列表中左上角的文章的分类显示--%>
                             <span class="cat">
                                 <a href="/category/${a.categoryCustomList[a.categoryCustomList.size()-1].categoryId}">
                                         ${a.categoryCustomList[a.categoryCustomList.size()-1].categoryName}
@@ -41,7 +31,6 @@
 
                         <div class="entry-content">
                             <div class="archive-content">
-                                <wbz:htmlFilter>${a.articleCustom.articleContent}</wbz:htmlFilter>......
                             </div>
                             <span class="title-l"></span>
                             <span class="new-icon">
@@ -70,30 +59,9 @@
                                         <i class="fa fa-eye"></i>
                                             ${a.articleCustom.articleViewCount} views
                                     </span>
-                                <%--    <span class="comment">&nbsp;&nbsp;
-                                        <a href="/article/${a.articleCustom.articleId}#comments" rel="external nofollow">
-                                          <i class="fa fa-comment-o"></i>
-                                            <c:choose>
-                                                <c:when test="${a.articleCustom.articleCommentCount==0}">
-                                                    发表评论
-                                                </c:when>
-                                                <c:otherwise>
-                                                    ${a.articleCustom.articleCommentCount}
-                                                </c:otherwise>
-                                            </c:choose>
-
-                                        </a>
-                                    </span>--%>
                                 </span>
                             <div class="clear"></div>
                         </div><!-- .entry-content -->
-
-                        <span class="entry-more">
-                                <a href="/article/${a.articleCustom.articleId}"
-                                   rel="bookmark">
-                                    阅读全文
-                                </a>
-                            </span>
                     </article>
                 </c:forEach>
             </main>
@@ -184,24 +152,5 @@
         <%@include file="Public/part/sidebar-2.jsp" %>
     </rapid:override>
     <%--侧边栏 end--%>
-
-    <%--友情链接 start--%>
-    <rapid:override name="link">
-        <div class="links-box">
-            <div id="links">
-                <c:forEach items="${linkCustomList}" var="l">
-                    <ul class="lx7">
-                        <li class="link-f link-name">
-                            <a href="${l.linkUrl}" target="_blank">
-                                    ${l.linkName}
-                            </a>
-                        </li>
-                    </ul>
-                </c:forEach>
-                <div class="clear"></div>
-            </div>
-        </div>
-    </rapid:override>
-    <%--友情链接 end--%>
 
 <%@ include file="Public/framework.jsp" %>

@@ -1,8 +1,5 @@
 package com.wbz.demo.controller.Home;
 
-
-import com.wbz.demo.entity.custom.*;
-import com.wbz.demo.service.*;
 import com.wbz.demo.entity.custom.ArticleListVo;
 import com.wbz.demo.entity.custom.CategoryCustom;
 import com.wbz.demo.service.CategoryService;
@@ -33,7 +30,6 @@ public class CategoryController {
 	@ModelAttribute
 	public void init(Model model) throws Exception {
 
-		
 	}
 	
 	//根据分类查询文章
@@ -72,5 +68,4 @@ public class CategoryController {
         modelAndView.addObject("categoryCustom",categoryCustom);
 		return modelAndView;
 	}
-
 }
