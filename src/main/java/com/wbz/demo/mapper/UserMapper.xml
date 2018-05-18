@@ -8,14 +8,13 @@
     <result column="user_nickname" property="userNickname" jdbcType="VARCHAR" />
     <result column="user_email" property="userEmail" jdbcType="VARCHAR" />
     <result column="user_url" property="userUrl" jdbcType="VARCHAR" />
-    <result column="user_avatar" property="userAvatar" jdbcType="VARCHAR" />
     <result column="user_last_login_ip" property="userLastLoginIp" jdbcType="VARCHAR" />
     <result column="user_register_time" property="userRegisterTime" jdbcType="TIMESTAMP" />
     <result column="user_last_login_time" property="userLastLoginTime" jdbcType="TIMESTAMP" />
     <result column="user_status" property="userStatus" jdbcType="INTEGER" />
   </resultMap>
   <sql id="Base_Column_List" >
-    user_id, user_name, user_pass, user_nickname, user_email, user_url, user_avatar, 
+    user_id, user_name, user_pass, user_nickname, user_email, user_url,
     user_last_login_ip, user_register_time, user_last_login_time, user_status
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
@@ -31,11 +30,11 @@
   <insert id="insert" parameterType="com.wbz.demo.entity.User" >
     insert into user (user_id, user_name, user_pass, 
       user_nickname, user_email, user_url, 
-      user_avatar, user_last_login_ip, user_register_time, 
+      user_last_login_ip, user_register_time,
       user_last_login_time, user_status)
     values (#{userId,jdbcType=INTEGER}, #{userName,jdbcType=VARCHAR}, #{userPass,jdbcType=VARCHAR}, 
       #{userNickname,jdbcType=VARCHAR}, #{userEmail,jdbcType=VARCHAR}, #{userUrl,jdbcType=VARCHAR}, 
-      #{userAvatar,jdbcType=VARCHAR}, #{userLastLoginIp,jdbcType=VARCHAR}, #{userRegisterTime,jdbcType=TIMESTAMP}, 
+      #{userLastLoginIp,jdbcType=VARCHAR}, #{userRegisterTime,jdbcType=TIMESTAMP},
       #{userLastLoginTime,jdbcType=TIMESTAMP}, #{userStatus,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="com.wbz.demo.entity.User" >
@@ -58,9 +57,6 @@
       </if>
       <if test="userUrl != null" >
         user_url,
-      </if>
-      <if test="userAvatar != null" >
-        user_avatar,
       </if>
       <if test="userLastLoginIp != null" >
         user_last_login_ip,
@@ -94,9 +90,6 @@
       <if test="userUrl != null" >
         #{userUrl,jdbcType=VARCHAR},
       </if>
-      <if test="userAvatar != null" >
-        #{userAvatar,jdbcType=VARCHAR},
-      </if>
       <if test="userLastLoginIp != null" >
         #{userLastLoginIp,jdbcType=VARCHAR},
       </if>
@@ -129,9 +122,6 @@
       <if test="userUrl != null" >
         user_url = #{userUrl,jdbcType=VARCHAR},
       </if>
-      <if test="userAvatar != null" >
-        user_avatar = #{userAvatar,jdbcType=VARCHAR},
-      </if>
       <if test="userLastLoginIp != null" >
         user_last_login_ip = #{userLastLoginIp,jdbcType=VARCHAR},
       </if>
@@ -154,7 +144,6 @@
       user_nickname = #{userNickname,jdbcType=VARCHAR},
       user_email = #{userEmail,jdbcType=VARCHAR},
       user_url = #{userUrl,jdbcType=VARCHAR},
-      user_avatar = #{userAvatar,jdbcType=VARCHAR},
       user_last_login_ip = #{userLastLoginIp,jdbcType=VARCHAR},
       user_register_time = #{userRegisterTime,jdbcType=TIMESTAMP},
       user_last_login_time = #{userLastLoginTime,jdbcType=TIMESTAMP},

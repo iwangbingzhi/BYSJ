@@ -4,15 +4,11 @@ import com.wbz.demo.entity.custom.*;
 import com.wbz.demo.mapper.ArticleMapper;
 import com.wbz.demo.mapper.CategoryMapper;
 import com.wbz.demo.mapper.UserMapper;
-import com.wbz.demo.mapper.custom.*;
 import com.wbz.demo.entity.Article;
 import com.wbz.demo.entity.User;
-import com.wbz.demo.entity.custom.*;
 import com.wbz.demo.mapper.custom.ArticleMapperCustom;
 import com.wbz.demo.mapper.custom.CategoryMapperCustom;
-/*import com.wbz.demo.mapper.custom.CommentMapperCustom;*/
 import com.wbz.demo.service.ArticleService;
-import com.wbz.demo.util.Functions;
 import com.wbz.demo.util.others.Page;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -279,23 +275,8 @@ public class ArticleServiceImpl implements ArticleService {
 		articleSearchVoList.get(0).setQuery(query);
 
 		return articleSearchVoList;
+	}
 
-	}
-	
-	//相似文章获取
-	@Override
-	public List<ArticleCustom> listArticleWithSameCategory(Integer status,Integer parentCategoryId,Integer childCategoryId, Integer limit) throws Exception {
-		List<ArticleCustom> similarArticleList = articleMapperCustom.listArticleWithSameCategory(status,parentCategoryId,childCategoryId,limit);
-		return similarArticleList;
-	}
-	
-	
-	//访问量从多到少的文章获取
-	@Override
-	public List<ArticleCustom> listArticleByViewCount(Integer status,Integer limit) throws Exception {
-		List<ArticleCustom> mostViewArticleList = articleMapperCustom.listArticleByViewCount(status,limit);
-		return mostViewArticleList;
-	}
 	
 	//获取下一篇文章
 	@Override

@@ -89,10 +89,8 @@ public class ArticleController {
 	public String editArticleSubmit(Integer id ,
 								 ArticleCustom articleCustom
 	) throws Exception {
-		
-		
+
 		articleService.updateArticle(id,articleCustom);
-		
 		return "redirect:articleList.action";
 	}
 

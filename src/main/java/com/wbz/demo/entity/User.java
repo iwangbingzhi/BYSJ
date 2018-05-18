@@ -15,8 +15,6 @@ public class User {
 
     private String userUrl;
 
-    private String userAvatar;
-
     private String userLastLoginIp;
 
     private Date userRegisterTime;
@@ -71,14 +69,6 @@ public class User {
 
     public void setUserUrl(String userUrl) {
         this.userUrl = userUrl == null ? null : userUrl.trim();
-    }
-
-    public String getUserAvatar() {
-        return userAvatar;
-    }
-
-    public void setUserAvatar(String userAvatar) {
-        this.userAvatar = userAvatar == null ? null : userAvatar.trim();
     }
 
     public String getUserLastLoginIp() {

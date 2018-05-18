@@ -130,16 +130,11 @@
                                 </c:if>
                             </c:otherwise>
                         </c:choose>
-
                     </div>
                 </nav>
                 <%--分页 end--%>
             </c:if>
-
         </section>
     </section>
 </rapid:override>
-
-
-
 <%@ include file="../Public/framework.jsp" %>

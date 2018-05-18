@@ -33,7 +33,7 @@ public interface ArticleService {
 	//删除文章
 	public void deleteArticle(Integer id) throws Exception;
 
-	//分页显示()
+	//分页显示
 	public List<ArticleListVo> listArticleByPage(Integer status, Integer pageNow, Integer pageSize) throws Exception;
 	
 	//文章详情页面显示
@@ -41,12 +41,6 @@ public interface ArticleService {
 	
 	//文章查询分页显示
 	public List<ArticleSearchVo> listSearchResultByPage(Integer status, HttpServletRequest request, Model model, Integer pageNow, Integer pageSize, String s) throws Exception;
- 
-	//获得相关文章
-	public List<ArticleCustom> listArticleWithSameCategory(Integer status, Integer parentCategoryId, Integer childCategoryId, Integer limit) throws Exception;
-	
-	//获取访问量较多的文章
-	public List<ArticleCustom> listArticleByViewCount(Integer status, Integer limit) throws Exception;
 	
 	//获得上一篇文章
 	public ArticleCustom getAfterArticle(Integer status, Integer id) throws Exception;

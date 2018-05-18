@@ -57,7 +57,7 @@
                                     </span>
                                     <span class="views">
                                         <i class="fa fa-eye"></i>
-                                            ${a.articleCustom.articleViewCount} views
+                                            ${a.articleCustom.articleViewCount} 查看
                                     </span>
                                 </span>
                             <div class="clear"></div>
@@ -70,17 +70,20 @@
             <nav class="navigation pagination" role="navigation">
                 <div class="nav-links">
                     <c:choose>
+                        <%--开始页数是1的判断--%>
                         <c:when test="${articleListVoList[0].page.totalPageCount <= 3 }">
                             <c:set var="begin" value="1"/>
                             <c:set var="end" value="${articleListVoList[0].page.totalPageCount }"/>
                         </c:when>
                         <c:otherwise>
-                            <c:set var="begin" value="${articleListVoList[0].page.pageNow-1 }"/>
+                            <%--开始页数不是1 前一页后一页的判断--%>
+                            <c:set var="begin" value="${articleListVoList[0].page.pageNow - 1 }"/>
                             <c:set var="end" value="${articleListVoList[0].page.pageNow + 2}"/>
                             <c:if test="${begin < 2 }">
                                 <c:set var="begin" value="1"/>
                                 <c:set var="end" value="3"/>
                             </c:if>
+                            <%--当totalcount%pagesize不能整除时--%>
                             <c:if test="${end > articleListVoList[0].page.totalPageCount }">
                                 <c:set var="begin" value="${articleListVoList[0].page.totalPageCount-2 }"/>
                                 <c:set var="end" value="${articleListVoList[0].page.totalPageCount }"/>
@@ -113,7 +116,7 @@
                                 <a class="page-numbers current" >${i}</a>
                             </c:when>
                             <c:otherwise>
-                                <a  class="page-numbers" href="/p/${i}">${i }</a>
+                                <a  class="page-numbers" href="/p/${i}">${i}</a>
                             </c:otherwise>
                         </c:choose>
                     </c:forEach>
