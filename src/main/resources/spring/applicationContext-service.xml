@@ -22,9 +22,6 @@
     <!-- 分类管理的service -->
     <bean id="categoryService" class="com.wbz.demo.service.impl.CategoryServiceImpl"/>
 
-    <!--网站信息管理的service-->
-   <!-- <bean id="optionService" class="com.wbz.demo.service.impl.OptionsServiceImpl"/>-->
-
     <!--常用功能-->
     <bean id="functions" class="com.wbz.demo.util.Functions"/>
 

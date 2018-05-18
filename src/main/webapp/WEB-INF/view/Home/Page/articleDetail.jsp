@@ -87,7 +87,7 @@
                             <li class="views">
                                 <i class="fa fa-eye"></i> <span
                                     class="articleViewCount">${articleDetailVo.articleCustom.articleViewCount}</span>
-                                views
+                                查看
                             </li>
                             <li class="r-hide">
                                 <a href="javascript:pr()" title="侧边栏">

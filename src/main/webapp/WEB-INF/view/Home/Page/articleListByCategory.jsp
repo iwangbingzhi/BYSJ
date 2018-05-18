@@ -101,7 +101,7 @@
                                     </span>
                                     <span class="views">
                                         <i class="fa fa-eye"></i>
-                                            ${a.articleCustom.articleViewCount} views
+                                            ${a.articleCustom.articleViewCount} 查看
                                     </span>
                                 </span>
                                                 <div class="clear"></div>
