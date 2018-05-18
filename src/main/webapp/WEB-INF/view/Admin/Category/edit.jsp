@@ -64,29 +64,11 @@
                     </div>
                     <br>
                     <div class="layui-input-block">
-                        图标样式
-                        <input type="text" name="categoryIcon" value="${categoryCustom.categoryIcon}"class="layui-input" >
-                    </div>
-                    <br>
-                    <div class="layui-input-block">
-                        状态 <br>
-                        <input type="radio" name="categoryStatus" value="1" title="显示" <c:if test="${categoryCustom.categoryStatus==1}">checked</c:if>>
-                        <input type="radio" name="categoryStatus" value="0" title="隐藏" <c:if test="${categoryCustom.categoryStatus==0}">checked</c:if>>
-                    </div>
-                    <br>
-                    <div class="layui-input-block">
                         <button class="layui-btn" lay-filter="formDemo" type="submit">保存</button>
                     </div>
                 </div>
             </form>
             <br><br>
-            <blockquote class="layui-elem-quote layui-quote-nm">
-                温馨提示：
-                <ul>
-                    <li>如果该分类为一级分类，父节点将不可修改</li>
-                    <li>如果该分类为二级分类，父节点可选择其对应的一级目录</li>
-                </ul>
-            </blockquote>
         </div>
         <div class="layui-col-md8">
             <table class="layui-table" >
@@ -95,7 +77,6 @@
                     <col width="50">
                     <col width="300">
                     <col width="100">
-                    <col width="50">
                     <col width="100">
                 </colgroup>
                 <thead>
@@ -104,7 +85,6 @@
                     <th>pid</th>
                     <th>名称</th>
                     <th>文章数</th>
-                    <th>状态</th>
                     <th>操作</th>
                 </tr>
                 </thead>
@@ -120,9 +100,9 @@
                             <td>
                                 <a href="/category/${c.categoryId}" target="_blank">${c.articleCount}</a>
                             </td>
-                            <td>
+                           <%-- <td>
                                     ${c.categoryStatus}
-                            </td>
+                            </td>--%>
                             <td>
                                 <a href="/admin/category/edit/${c.categoryId}" class="layui-btn layui-btn-mini">编辑</a>
                                 <c:if test="${c.articleCount==0}">
@@ -154,18 +134,9 @@
                             </c:if>
                         </c:forEach>
                     </c:if>
-
-
                 </c:forEach>
                 </tbody>
             </table>
-            <blockquote class="layui-elem-quote layui-quote-nm">
-                温馨提示：
-                <ul>
-                    <li>分类最多只有两级，一级分类pid=0，二级分类pid=其父节点id</li>
-                    <li>如果该分类包含文章，将不可删除</li>
-                </ul>
-            </blockquote>
         </div>
     </div>
 

@@ -66,28 +66,6 @@
         ORDER BY article_status ASC, article_order DESC, article_id DESC
     </select>
 
-
-    <!--文章列表查询-->
-    <select id="getArticleList" parameterType="com.wbz.demo.entity.custom.ArticleListVo"
-            resultType="com.wbz.demo.entity.custom.ArticleCustom">
-        SELECT
-        <include refid="article_table_all_columns"/>
-        FROM article
-        <trim prefix="WHERE" prefixOverrides="AND |OR " suffixOverrides="AND |OR">
-           <if test="status!=null">
-              article_status=#{status} AND
-           </if>
-            <if test="articleCustom!=null">
-                <if test="articleCustom.post_title!=null and articleCustom.post_title!=''">
-                    article_title LIKE '%${articleCustom.articleTitle}%'
-                </if>
-            </if>
-        </trim>
-        ORDER BY article_status ASC, article_order DESC, article_id DESC
-
-    </select>
-
-
     <!--通过分页查询文章-->
     <select id="listArticleByPage" resultType="com.wbz.demo.entity.custom.ArticleCustom">
          SELECT

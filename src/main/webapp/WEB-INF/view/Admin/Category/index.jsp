@@ -63,28 +63,10 @@
                     </div>
                     <br>
                     <div class="layui-input-block">
-                        分类描述
-                        <input type="text" name="categoryDescription" placeholder="请输入分类描述" autocomplete="off" class="layui-input" >
-                    </div>
-                    <br>
-                    <div class="layui-input-block">
-                        图标样式
-                        <input type="text" name="categoryIcon" placeholder="请输入图标样式,如 fa fa-coffee" autocomplete="off" class="layui-input" >
-                    </div>
-                    <br>
-                    <div class="layui-input-block">
                         <button class="layui-btn" lay-filter="formDemo" type="submit">添加</button>
                     </div>
                 </div>
             </form>
-            <blockquote class="layui-elem-quote layui-quote-nm">
-                温馨提示：
-                <ul>
-                    <li>如果该分类为一级分类，父节点选"无"</li>
-                    <li>如果该分类为二级分类，父节点选择其对应的一级目录</li>
-                    <li>图标样式可以参考<a href="http://fontawesome.io/icons/" target="_blank"> fontawesome </a>,建议给一级分类添加 </li>
-                </ul>
-            </blockquote>
         </div>
         <div class="layui-col-md8" style="border: 1px solid #FF5722;">
             <table class="layui-table" >
@@ -94,7 +76,6 @@
                     <col width="300">
                     <col width="100">
                     <col width="100">
-                    <col width="100">
                 </colgroup>
                 <thead>
                 <tr>
@@ -102,7 +83,6 @@
                     <th>pid</th>
                     <th>名称</th>
                     <th>文章数</th>
-                    <th>状态</th>
                     <th>操作</th>
                 </tr>
                 </thead>
@@ -117,16 +97,6 @@
                             </td>
                             <td>
                                 <a href="/category/${c.categoryId}" target="_blank">${c.articleCount}</a>
-                            </td>
-                            <td>
-                                    <c:choose>
-                                        <c:when test="${c.categoryStatus==1}">
-                                            显示
-                                        </c:when>
-                                        <c:otherwise>
-                                            <span style="color:#FF5722;">隐藏</span>
-                                        </c:otherwise>
-                                    </c:choose>
                             </td>
                             <td>
                                 <a href="/admin/category/edit/${c.categoryId}" class="layui-btn layui-btn-mini">编辑</a>
@@ -147,16 +117,6 @@
                                         <a href="/category/${c2.categoryId}" target="_blank">${c2.articleCount}</a>
                                     </td>
                                     <td>
-                                        <c:choose>
-                                            <c:when test="${c2.categoryStatus==1}">
-                                                显示
-                                            </c:when>
-                                            <c:otherwise>
-                                                <span style="color:#FF5722;">隐藏</span>
-                                            </c:otherwise>
-                                        </c:choose>
-                                    </td>
-                                    <td>
                                         <a href="/admin/category/edit/${c2.categoryId}" class="layui-btn layui-btn-mini">编辑</a>
                                         <c:if test="${c2.articleCount==0}">
                                             <a href="/admin/category/delete/${c2.categoryId}" class="layui-btn layui-btn-danger layui-btn-mini" onclick="return confirmDelete()">删除</a>
@@ -166,18 +126,9 @@
                             </c:if>
                         </c:forEach>
                     </c:if>
-
-
                 </c:forEach>
                 </tbody>
             </table>
-            <blockquote class="layui-elem-quote layui-quote-nm">
-                温馨提示：
-                <ul>
-                    <li>分类最多只有两级，一级分类pid=0，二级分类pid=其父节点id</li>
-                    <li>如果该分类包含文章，将不可删除</li>
-                </ul>
-            </blockquote>
         </div>
     </div>
 

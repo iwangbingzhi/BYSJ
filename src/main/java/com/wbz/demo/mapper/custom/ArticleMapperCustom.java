@@ -30,16 +30,6 @@ public interface ArticleMapperCustom {
 	//查询文章分页操作
 	public List<ArticleCustom> listSearchResultByPage(@Param(value = "status") Integer status, @Param(value = "query") String query, @Param(value = "startPos") Integer startPos, @Param(value = "pageSize") Integer pageSize) throws Exception;
 
-/*	//获得同分类的文章(相关文章)
-	public List<ArticleCustom> listArticleWithSameCategory(
-            @Param(value = "status") Integer status,
-            @Param(value = "parentCategory") Integer parentCategory
-            , @Param(value = "childCategory") Integer childCategory
-            , @Param(value = "limit") Integer limit
-    ) throws Exception;*/
-
-
-
 	//获得上一篇文章
 	public ArticleCustom getAfterArticle(@Param(value = "status") Integer status, @Param(value = "id") Integer id) throws Exception;
 	
