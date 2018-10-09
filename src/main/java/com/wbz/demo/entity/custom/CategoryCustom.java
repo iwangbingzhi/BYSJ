@@ -31,4 +31,10 @@ public class CategoryCustom extends Category {
     public void setCategoryPname(String categoryPname) {
         this.categoryPname = categoryPname;
     }
+
+    public static void main(String[] args) {
+
+    }
 }
+
+

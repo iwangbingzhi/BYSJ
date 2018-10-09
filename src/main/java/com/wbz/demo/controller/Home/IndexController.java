@@ -24,16 +24,6 @@ public class IndexController {
 	
 	@Autowired
 	private ArticleService articleService;
-
-	/*@Autowired
-	private LinkService linkService;
-	
-	@ModelAttribute
-	public void init(Model model)  throws Exception {
-		//友情链接
-		List<LinkCustom> linkCustomList = linkService.listLink(1);
-		model.addAttribute("linkCustomList",linkCustomList);
-	}*/
 	
 	//首页显示
 	@RequestMapping("/")

@@ -73,6 +73,5 @@
             <mvc:mapping path="/admin/**"/>
             <bean class="com.wbz.demo.Interceptor.AdminResourceInterceptor"/>
         </mvc:interceptor>
-
     </mvc:interceptors>
 </beans>

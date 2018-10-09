@@ -60,7 +60,7 @@ public class ArticleController {
 	}
 	
 	//文章点赞数增加
-	@RequestMapping(value = "/article/addLike/{id}",method = {RequestMethod.POST})
+	@RequestMapping(value = "/article/.addLike/{id}",method = {RequestMethod.POST})
 	@ResponseBody
 	public Integer increaseLikeCount(@PathVariable("id") Integer id)
 		throws Exception {
