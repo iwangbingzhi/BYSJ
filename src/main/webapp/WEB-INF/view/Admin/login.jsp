@@ -71,7 +71,7 @@
              if ("username".equals(cookies[i].getName())) {
                     username = cookies[i].getValue();
              } else if ("password".equals(cookies[i].getName())) {
-                 password = cookies[i].getValue();
+                    password = cookies[i].getValue();
              }
          }
          %>
@@ -93,18 +93,16 @@
         </p>
     </form>
 
-
-
     <script type="text/javascript">
         function wp_attempt_focus(){
-            setTimeout( function(){ try{
+            setTimeout( function(){
+                try{
                 d = document.getElementById('user_login');
                 d.focus();
                 d.select();
             } catch(e){}
             }, 200);
         }
-
         wp_attempt_focus();
         if(typeof wpOnload=='function')wpOnload();
     </script>
@@ -118,8 +116,6 @@
 
 <script src="/js/jquery.min.js"></script>
 <script type="text/javascript">
-
-
     <%--登录验证--%>
     $("#submit-btn").click(function () {
         var user = $("#user_login").val();
@@ -141,7 +137,6 @@
                         alert(data.msg);
                     } else {
                         window.location.href="/admin";
-
                     }
                 },
                 error: function () {
@@ -150,7 +145,6 @@
             })
         }
     })
-
 </script>
 </body>
 </html>

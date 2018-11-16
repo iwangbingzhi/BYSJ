@@ -89,7 +89,6 @@ public class AdminController {
             user.setUserLastLoginTime(new Date());
             user.setUserLastLoginIp(Functions.getIpAddr(request));
             userService.updateUser(user);
-
         }
         String result = new JSONObject(map).toString();
         return result;
