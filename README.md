@@ -9,7 +9,7 @@
 我们解决方式如下代码所示：</br>
 ```
 <%--end代表当前页的后一页，begin代表当前页的前一页--%>
- <c:if test="${end > page.totalPageCount }">
+<c:if test="${end > page.totalPageCount }">
      <c:set var="begin" value="${page.totalPageCount-2 }"/>
      <c:set var="end" value="${page.totalPageCount }"/>
 </c:if>
