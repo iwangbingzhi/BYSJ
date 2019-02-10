@@ -71,19 +71,21 @@
                 <div class="nav-links">
                     <c:choose>
                         <%--开始页数是1的判断--%>
+                        <%--begin和end代表的分别是当前页的前一页和当前页的后一页--%>
                         <c:when test="${articleListVoList[0].page.totalPageCount <= 3 }">
                             <c:set var="begin" value="1"/>
                             <c:set var="end" value="${articleListVoList[0].page.totalPageCount }"/>
                         </c:when>
                         <c:otherwise>
                             <%--开始页数不是1 前一页后一页的判断--%>
+                            <%--begin和end代表的分别是当前页的前一页和当前页的后一页--%>
                             <c:set var="begin" value="${articleListVoList[0].page.pageNow - 1 }"/>
                             <c:set var="end" value="${articleListVoList[0].page.pageNow + 2}"/>
                             <c:if test="${begin < 2 }">
                                 <c:set var="begin" value="1"/>
                                 <c:set var="end" value="3"/>
                             </c:if>
-                            <%--当totalcount%pagesize不能整除时--%>
+                            <%--当totalcount%pagesize不能整除时，防止尾页溢出的情况，当前页的后一页大于总的页数--%>
                             <c:if test="${end > articleListVoList[0].page.totalPageCount }">
                                 <c:set var="begin" value="${articleListVoList[0].page.totalPageCount-2 }"/>
                                 <c:set var="end" value="${articleListVoList[0].page.totalPageCount }"/>

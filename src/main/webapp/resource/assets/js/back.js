@@ -157,8 +157,6 @@ function logout() {
     })
 }
 
-
-
 //添加用户检查用户名是否存在
 function checkUserName() {
     var result;

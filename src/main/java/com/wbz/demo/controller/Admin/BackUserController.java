@@ -121,7 +121,6 @@ public class BackUserController {
         return modelAndView;
     }
 
-
     //编辑用户提交
     @RequestMapping(value = "/editSubmit",method = RequestMethod.POST)
     public String editUserSubmit(User user) throws Exception {
