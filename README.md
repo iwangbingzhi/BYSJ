@@ -10,9 +10,9 @@
 我们解决方式如下代码所示：</br>
 ```
 <%--end代表当前页的后一页，begin代表当前页的前一页--%>
-<c:if test="${end > articleListVoList[0].page.totalPageCount }">
-     <c:set var="begin" value="${articleListVoList[0].page.totalPageCount-2 }"/>
-     <c:set var="end" value="${articleListVoList[0].page.totalPageCount }"/>
+ <c:if test="${end > page.totalPageCount }">
+     <c:set var="begin" value="${page.totalPageCount-2 }"/>
+     <c:set var="end" value="${page.totalPageCount }"/>
 </c:if>
 ```
 解决溢出问题之后如图所示：</br>
